@@ -26,3 +26,8 @@
 .form-success{
     visibility: hidden;
 }
+
+.button-submit{
+    width: 120px;
+    background-color: #66ccff;
+}

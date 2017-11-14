@@ -1,0 +1,49 @@
+/*主要布局样式*/
+.master-body{
+    width: 950px;
+    margin: 0 auto;
+}
+
+.body-left{
+    /*width: 250px;*/
+    float: left;
+    text-align: center;
+}
+
+.body-right{
+    /*width: 750px;*/
+    float: right;
+    text-align: center;
+}
+
+.clear{
+    clear: both;
+}
+
+/*左侧样式*/
+.body-left-middle{
+    border: 3px solid lightgray;
+}
+
+/*右侧样式*/
+.body-right-top{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.body-right-nav{
+    text-align: left;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.body-right-main-left-text{
+    float: left;
+    width: 500px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.body-right-main-right-img{
+    margin-bottom: 50px;
+}
