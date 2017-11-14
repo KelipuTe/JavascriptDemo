@@ -1,0 +1,28 @@
+.master-top{
+    text-align: center;
+}
+
+.master-body{
+    margin: 0 auto;
+    width: 420px;
+    border: 1px solid green;
+}
+
+.form-group{
+    width: 400px;
+}
+
+.form-lable{}
+
+.form-input{
+    width: 100%;
+}
+
+.form-error{
+    visibility: visible;
+    color: red;
+}
+
+.form-success{
+    visibility: hidden;
+}
