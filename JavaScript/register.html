@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <script src="../ThirdPartyLibrary/jquery-3.2.1.js" type="text/javascript" rel="script"></script>
+    <script src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" rel="script"></script>
+    <link href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Hello World!</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4" for="username">username：</label>
+                    <div class="col-md-8">
+                        <input id="username" type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4" for="email">email：</label>
+                    <div class="col-md-8">
+                        <input id="email" type="email" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4" for="password">password：</label>
+                    <div class="col-md-8">
+                        <input id="password" type="password" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4" for="password-again">password again：</label>
+                    <div class="col-md-8">
+                        <input id="password-again" type="password" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4" for="telephone">telephone：</label>
+                    <div class="col-md-8">
+                        <input id="telephone" type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4" for="personal-id">personal-id：</label>
+                    <div class="col-md-8">
+                        <input id="personal-id" type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group" id="sex">
+                    <label class="col-md-4">sex：</label>
+                    <div class="col-md-8">
+                        <label for="sex-male"><input id="sex-male" type="radio" name="sex" value="male" /> male</label>
+                        <label for="sex-female"><input id="sex-female" type="radio" name="sex" value="female" /> female</label>
+                    </div>
+                </div>
+                <div class="form-group" id="birthday">
+                    <label class="col-md-4">birthday：</label>
+                    <div class="col-md-8">
+                        <label for="birthday-year">year</label>
+                        <select id="birthday-year" name="birthday-year"></select>
+                        <label for="birthday-month">month</label>
+                        <select id="birthday-month" name="birthday-month"></select>
+                        <label for="birthday-day">day</label>
+                        <select id="birthday-day" name="birthday-day"></select>
+                    </div>
+                </div>
+                <div class="form-group" id="hobby">
+                    <label class="col-md-4">hobby：</label>
+                    <div class="col-md-8">
+                        <label for="hobby-php"><input id="hobby-php" type="checkbox" name="hobby" value="php" > php</label>
+                        <label for="hobby-c"><input id="hobby-c" type="checkbox" name="hobby" value="c" > c</label>
+                        <label for="hobby-java"><input id="hobby-java" type="checkbox" name="hobby" value="java" > java</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        /*输出出生日期下拉菜单*/
+        function birthday() {
+            var i;
+            for(i=1900;i<=2050;++i){
+                $('#birthday-year').append('<option value="'+i+'">'+i+'</option>');
+            }
+            for(i=1;i<=12;++i){
+                $('#birthday-month').append('<option value="'+i+'">'+i+'</option>');
+            }
+            for(i=1;i<=31;++i){
+                $('#birthday-day').append('<option value="'+i+'">'+i+'</option>');
+            }
+        }
+        birthday();
+
+        /*验证手机号*/
+        $('#telephone').blur(function () {
+            var pattern = /^1[34578]\d{9}$/;
+            var phone = $('#telephone').val();
+            console.log('phone:'+phone);
+            if(pattern.test(phone)){
+                console.log('telephone,success');
+            }else{
+                console.log('telephone,failed');
+            }
+        });
+
+        /*验证身份证*/
+        $('#personal-id').blur(function () {
+            var pattern = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+            var personal_id = $('#personal-id').val();
+            console.log('phone:'+personal_id);
+            if(pattern.test(personal_id)){
+                console.log('personal-id,success');
+            }else{
+                console.log('personal-id,failed');
+            }
+        });
+    });
+</script>
+</body>
+</html>
