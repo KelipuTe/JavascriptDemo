@@ -5,8 +5,8 @@ var io = require('socket.io')(http);
 
 /*类似于Laravel的路由*/
 app.get('/',function (request,response) {
-    // response.send('hello world')/*向客户端发送信息*/
-    response.sendFile(__dirname+'/leftSlippingBox.html');/*向客户端发送文件*/
+    response.send('hello world')/*向客户端发送信息*/
+    //response.sendFile(__dirname+'/leftSlippingBox.html');/*向客户端发送文件*/
 });
 
 io.on('connection',function (socket) {
