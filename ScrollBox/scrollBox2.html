@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .lunbo {
+            position: relative;
+            width: 600px;
+            height: 100px;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        .lunbo-ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 600px;
+            height: auto;
+        }
+
+        .lunbo-li {
+            width: 600px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: #333;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+<div class="lunbo">
+    <ul id="aaa" class="lunbo-ul">
+        <li class="lunbo-li">人生在世须尽欢 莫使金樽空对月</li>
+        <li class="lunbo-li">我寄愁心与明月，随风直到夜郎西</li>
+        <li class="lunbo-li">不是花中偏爱菊，此花开尽更无花</li>
+        <li class="lunbo-li">辛苦遭逢起一经，干戈寥落四周星</li>
+        <li class="lunbo-li">山河破碎风飘絮，身世浮沉雨打萍。</li>
+        <li class="lunbo-li">惶恐滩头说惶恐，零丁洋里叹零丁。</li>
+        <li class="lunbo-li">人生自古谁无死？留取丹心照汗青。</li>
+    </ul>
+</div>
+<script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+<script>
+    function lunbo(height) {
+        var ul = $('#aaa');
+        var liFirst = ul.find('li:first');//获得 #aaa 下第一个 <li> 元素
+        /*动画效果*/
+        /*将 #aaa 元素上移 50px*/
+        /*将 #aaa 元素第一个 <li> 子元素克隆并删除，在末尾添加该元素，将 #aaa 元素高度调整到相对位置 0*/
+        $('#aaa').animate({top: height}).animate({"top": 0}, 0, function () {
+            var clone = liFirst.clone();//克隆 <dt> 元素
+            $('#aaa').append(clone);//将克隆的 <dt> 元素添加到 #lunbo-area 末尾
+            liFirst.remove();//删除第一个 <dt> 元素
+        });
+    }
+    setInterval("lunbo('-50px')", 3000);//每 3 秒执行一次 lunbo() 函数
+</script>
+</body>
+</html>

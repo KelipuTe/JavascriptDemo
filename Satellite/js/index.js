@@ -1,5 +1,5 @@
 // base image: http://hd4desktop.com/images/m/a-colours-circle-rainbow-HD-Wallpaper.jpg
-var data =  document.getElementById("data-lineCount").innerText;
+var data =  document.getElementById("data-lineCount").innerText;//获取设置的 3D 圆环效果参数
 var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
@@ -122,7 +122,7 @@ function Line() {
 }
 Line.prototype.reset = function() { 
 
-  this.rad = Math.random() * Math.PI * 2,
+  this.rad = Math.random() * Math.PI * 2;
   this.len = w * ( opts.ellipseBaseRadius + Math.random() * opts.ellipseAddedRadius );
   this.lenVel = opts.lineBaseVel + Math.random() * opts.lineAddedVel;
   
@@ -133,6 +133,7 @@ Line.prototype.reset = function() {
   
   this.alpha = .2 + Math.random() * .8;
 }
+
 Line.prototype.step = function() {
   
   --this.life;
@@ -151,6 +152,7 @@ Line.prototype.step = function() {
   if( this.life <= 0 )
     this.reset();
 }
+
 Line.prototype.draw = function() {
   
   var ratio = Math.abs( this.life / this.originalLife - 1/2 );
@@ -168,15 +170,16 @@ Line.prototype.draw = function() {
 }
 
 function Star() {
-  
   this.reset();
-};
+}
+
 Star.prototype.reset = function() {
   
   this.x = Math.random() * w;
   this.y = Math.random() * h;
   this.life = opts.starBaseLife + Math.random() * opts.starAddedLife;
 }
+
 Star.prototype.step = function() {
   
   --this.life;
@@ -184,6 +187,7 @@ Star.prototype.step = function() {
   if( this.life <= 0 )
     this.reset();
 }
+
 Star.prototype.draw = function(){
   
   ctx.fillStyle = ctx.shadowColor = 'hsla(hue, 80%, 50%, .2)'

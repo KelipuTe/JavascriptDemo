@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/htmaxCount; charset=utf-8" />
+    <title>左右滑动</title>
+    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        .all_div {
+            width:96px;
+            height:66px;
+            position:relative;
+            overflow:hidden
+        }
+        .all_div .main {
+            position:absolute;
+        }
+        .all_div .main .mbox {
+            float:left;
+            width:96px;
+            height:60px;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li id="lan1">我是栏目1</li>
+    <li id="lan2">我是栏目2</li>
+</ul>
+<div class = "all_div">
+    <div class="main">
+        <div class="mbox">我是内容是1</div>
+        <div class="mbox">我是内容是2</div>
+        <div class="mbox">我是内容是3</div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var mainWidth = $(".mbox").width();
+    var maxCount = $(".mbox").length;
+    var nowNum = 0;   //当前页的索引
+
+    $(".main").width(mainWidth*maxCount);
+    $(".main").css({background:"#f60"});
+
+    $("#lan1").click(function(){
+        if(nowNum > 0){
+            nowNum--;
+            $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){});
+        }
+    })
+
+    $("#lan2").click(function(){
+        if(nowNum == maxCount-1){//如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可return;不做任何操作
+            $(".main").append("<div class='mbox'>我是内容是"+(maxCount+1)+"</div>");
+            maxCount = $(".mbox").length;
+            $(".main").width(mainWidth*maxCount);
+        }
+
+        nowNum++;
+        $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){})
+    })
+</script>
