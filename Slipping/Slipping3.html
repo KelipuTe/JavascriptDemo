@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/htmaxCount; charset=utf-8" />
+    <title>滑动展示</title>
+    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        .slipping-show {
+            width:100px;
+            height:60px;
+            overflow:hidden;
+            position:relative;
+            float:left;
+        }
+        .slipping-main {
+            width:100px;
+            height:60px;
+            position:relative;
+            float:left;
+        }
+        .slipping-box {
+            width:100px;
+            height:60px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<div id="slipping-container-1" style="width:800px;height: 60px"></div>
+</body>
+</html>
+<script type="text/javascript">
+    var mainWidth = 100;
+    $("#slipping-container-1").hide();
+    for(var index = 1;index <= 8;++index){
+        $("#slipping-container-1").append("<div class='slipping-show slipping-show-"+index+"'></div>");
+        $(".slipping-show-"+index).append("<div class='slipping-main slipping-main-"+index+"'></div>");
+        $(".slipping-main-"+index).append("<div class='slipping-box'>图片</div>");
+        $(".slipping-main-"+index).append("<div class='slipping-box'></div>");
+        $(".slipping-main-"+index).width(mainWidth*2);
+        //$(".slipping-main-"+index).css({background:"#66ccff"});
+        right(index);
+    }
+    setTimeout("slippingContainerShow("+1+")",500);
+
+    function slippingContainerShow(index){
+        $("#slipping-container-"+index).show();
+        for(var times = 1;times <= 8;++times){
+            setTimeout("left("+times+")",times*200);
+        }
+    }
+
+    function left(index){
+        $(".slipping-main-"+index).animate({left:$(".slipping-main-"+index).position().left+mainWidth,opacity:1},500,function(){});
+    }
+
+    function right(index){
+        $(".slipping-main-"+index).animate({left:$(".slipping-main-"+index).position().left-mainWidth,opacity:1},500,function(){});
+    }
+</script>

@@ -23,8 +23,8 @@
 </head>
 <body>
 <ul class="menu">
-    <li id="lan1">我是栏目1</li>
-    <li id="lan2">我是栏目2</li>
+    <li id="lan1">left</li>
+    <li id="lan2">right</li>
 </ul>
 <div class = "all_div">
     <div class="main">
@@ -48,7 +48,7 @@
             nowNum--;
             $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){});
         }
-    })
+    });
 
     $("#lan2").click(function(){
         if(nowNum == maxCount-1){//如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可return;不做任何操作
@@ -56,8 +56,7 @@
             maxCount = $(".mbox").length;
             $(".main").width(mainWidth*maxCount);
         }
-
         nowNum++;
         $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){})
-    })
+    });
 </script>
