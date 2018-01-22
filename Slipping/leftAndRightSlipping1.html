@@ -26,8 +26,11 @@
     <li id="lan1">left</li>
     <li id="lan2">right</li>
 </ul>
+<!--观察窗口-->
 <div class = "all_div">
+    <!--元素载体-->
     <div class="main">
+        <!--具体元素-->
         <div class="mbox">我是内容是1</div>
         <div class="mbox">我是内容是2</div>
         <div class="mbox">我是内容是3</div>
@@ -36,27 +39,29 @@
 </body>
 </html>
 <script type="text/javascript">
-    var mainWidth = $(".mbox").width();
-    var maxCount = $(".mbox").length;
-    var nowNum = 0;   //当前页的索引
+    var mainWidth = $(".mbox").width(); // 设置单位宽度为具体元素宽度
+    var maxCount = $(".mbox").length; // 计算载体中元素个数
+    var nowNum = 0; // 当前页的索引
 
-    $(".main").width(mainWidth*maxCount);
+    $(".main").width(mainWidth*maxCount); // 计算载体宽度
     $(".main").css({background:"#f60"});
 
     $("#lan1").click(function(){
-        if(nowNum > 0){
-            nowNum--;
+        if(nowNum > 0){ // 如果不是第一页
+            nowNum--; // 索引前移
+            /* 将载体向右移动一个单位宽度 */
             $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){});
         }
     });
 
     $("#lan2").click(function(){
-        if(nowNum == maxCount-1){//如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可return;不做任何操作
-            $(".main").append("<div class='mbox'>我是内容是"+(maxCount+1)+"</div>");
-            maxCount = $(".mbox").length;
-            $(".main").width(mainWidth*maxCount);
+        if(nowNum == maxCount-1){ // 如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可return;不做任何操作
+            $(".main").append("<div class='mbox'>我是内容是"+(maxCount+1)+"</div>"); // 添加一个元素结点
+            maxCount = $(".mbox").length; // 重新计算载体中元素个数
+            $(".main").width(mainWidth*maxCount); // 重新计算载体宽度
         }
-        nowNum++;
+        nowNum++; // 索引后移
+        /* 将载体向左移动一个单位宽度 */
         $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){})
     });
 </script>

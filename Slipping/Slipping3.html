@@ -3,7 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/htmaxCount; charset=utf-8" />
     <title>滑动展示</title>
-    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <!--<script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>-->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <style type="text/css">
         .slipping-show {
             width:100px;
@@ -26,35 +27,55 @@
     </style>
 </head>
 <body>
-<div id="slipping-container-1" style="width:800px;height: 60px"></div>
+<div id="slipping-container-master"></div>
 </body>
 </html>
 <script type="text/javascript">
-    var mainWidth = 100;
-    $("#slipping-container-1").hide();
-    for(var index = 1;index <= 8;++index){
-        $("#slipping-container-1").append("<div class='slipping-show slipping-show-"+index+"'></div>");
-        $(".slipping-show-"+index).append("<div class='slipping-main slipping-main-"+index+"'></div>");
-        $(".slipping-main-"+index).append("<div class='slipping-box'>图片</div>");
-        $(".slipping-main-"+index).append("<div class='slipping-box'></div>");
-        $(".slipping-main-"+index).width(mainWidth*2);
-        //$(".slipping-main-"+index).css({background:"#66ccff"});
-        right(index);
+    var mainWidth = 100; // 图片宽度
+    var x; // 图片横向坐标
+    var y; // 图片纵向坐标
+    var MAX_X = 6; // 图片横向最大行数
+    var MAX_Y = 8; // 图片纵向最大列数
+    for(x = 1;x <= MAX_X ;++x){
+        /* 在修改过最大规格后，需要手动调整载体容器宽度 */
+        $("#slipping-container-master").append('<div id="slipping-container-'+x+'" style="width:800px;height:60px"></div>');
+        $("#slipping-container-"+x).hide(); // 隐藏横向元素，在添加纵向元素时保持隐藏
+        for(y = 1;y <= MAX_Y;++y){
+            $("#slipping-container-"+x).append("<div class='slipping-show slipping-show-"+x+y+"'></div>"); // 添加观察窗口元素
+            $(".slipping-show-"+x+y).append("<div class='slipping-main slipping-main-"+x+y+"'></div>"); // 添加载体元素
+            $(".slipping-show-"+x+y).hover(
+                function(){
+                    console.log($(this).position().left-mainWidth);
+                    console.log($(this).position().left-mainWidth);
+                    $(this).animate({left:$(this).position().left-mainWidth,opacity:1},500,function(){});
+                },
+                function(){
+                    console.log("out");
+                    $(this).animate({left:$(this).position().left+mainWidth,opacity:1},500,function(){});
+                });
+            /* 添加图片 */
+            $(".slipping-main-"+x+y).append("<div class='slipping-box'><img src='/image/avatar/ougen.jpg' style='width:100px;height:60px'></div>");
+            $(".slipping-main-"+x+y).append("<div class='slipping-box'></div>"); // 添加空白
+            $(".slipping-main-"+x+y).width(mainWidth*2); // 设置载体元素宽度，滑动时滑动的距离是固定的
+            right(x,y); // 载体元素左移，显示空白部分，隐藏图片部分
+        }
+        setTimeout("slippingContainerShow("+x+")",x*500); // 第 x 排横向元素，显示的时间推迟 x * 0.5 秒
     }
-    setTimeout("slippingContainerShow("+1+")",500);
 
-    function slippingContainerShow(index){
-        $("#slipping-container-"+index).show();
-        for(var times = 1;times <= 8;++times){
-            setTimeout("left("+times+")",times*200);
+    /* 显示横向元素及通过滑动的方式显示其纵向子元素 */
+    function slippingContainerShow(x){
+        $("#slipping-container-"+x).show();
+        for(var y = 1;y <= MAX_Y;++y){
+            setTimeout("left("+x+","+y+")",y*200); // 第 y 列纵向元素，显示的时间推迟 y * 0.2 秒
         }
     }
-
-    function left(index){
-        $(".slipping-main-"+index).animate({left:$(".slipping-main-"+index).position().left+mainWidth,opacity:1},500,function(){});
+    /* 查看左边的部分，实际上元素向右移 */
+    function left(x,y){
+        /* 选取横纵坐标匹配的元素，将其按照当前位置向右移动一个子元素宽度 */
+        $(".slipping-main-"+x+y).animate({left:$(".slipping-main-"+x+y).position().left+mainWidth,opacity:1},500,function(){});
     }
-
-    function right(index){
-        $(".slipping-main-"+index).animate({left:$(".slipping-main-"+index).position().left-mainWidth,opacity:1},500,function(){});
+    /* 查看右侧的部分，实际上元素向左移 */
+    function right(x,y){
+        $(".slipping-main-"+x+y).animate({left:$(".slipping-main-"+x+y).position().left-mainWidth,opacity:1},500,function(){});
     }
 </script>
