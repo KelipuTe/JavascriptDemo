@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片动画特效</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+<!--图片蓝色闪烁边框阴影-->
+<div class="container-box">
+    <img class="anim_image" src="../Resource/image/warship/warship_200X320/zhaigai.png" />
+</div>
+
+<!--鼠标悬停的淡入淡出-->
+<div class="container-box">
+    <img class="image_size anim_fade_image" src="../Resource/image/warship/warship_200X320/lexgai.png" />
+    <img class="image_size" src="../Resource/image/warship/warship_200X320/salagai.png" />
+</div>
+
+<!--鼠标点击的淡入淡出-->
+<div class="container-box">
+    <img class="trans_fade_image image_size" src="../Resource/image/warship/warship_200X320/lexgai.png" />
+    <img class="image_size" src="../Resource/image/warship/warship_200X320/salagai.png" />
+    <script>
+        $(document).ready(function () {
+            $(".trans_fade_image").on("click",function () {
+                if($(".trans_fade_image").hasClass("trans_fade_image_click")){
+                    $(".trans_fade_image").removeClass("trans_fade_image_click");
+                } else {
+                    $(".trans_fade_image").addClass("trans_fade_image_click");
+                }
+            });
+        });
+    </script>
+</div>
+
+<!--图片轮转缩放显示-->
+<div class="container-box transform_box">
+    <img class="image_size transform_image transform_image_top" src="../Resource/image/warship/warship_200X320/lexgai.png" />
+    <img class="image_size transform_image transform_image_bottom" src="../Resource/image/warship/warship_200X320/salagai.png" />
+</div>
+</body>
+</html>
