@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bfd1128-0dcb-476f-8540-682e0b78b89a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrostedGlass/ssv_fortress.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DirectionAware/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DirectionAware/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DirectionAware/scss/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrostedGlass/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrostedGlass/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FrostedGlass/ssv_fortress.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Satellite/index.html" afterPath="$PROJECT_DIR$/Satellite/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScrollBox/scrollBox.html" afterPath="$PROJECT_DIR$/ScrollBox/scrollBox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScrollBox/scrollBox2.html" afterPath="$PROJECT_DIR$/ScrollBox/scrollBox2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Slipping/Slipping3.html" afterPath="$PROJECT_DIR$/Slipping/Slipping3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Slipping/leftAndRightSlipping1.html" afterPath="$PROJECT_DIR$/Slipping/leftAndRightSlipping1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectionAware/index.html" afterPath="$PROJECT_DIR$/DirectionAware/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrostedGlass/index.html" afterPath="$PROJECT_DIR$/FrostedGlass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrostedGlass/style.css" afterPath="$PROJECT_DIR$/FrostedGlass/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Radar/index.html" afterPath="$PROJECT_DIR$/Radar/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Radar/index2.html" afterPath="$PROJECT_DIR$/Radar/index2.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,28 +19,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrostedGlass/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FrostedGlass/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,7 +58,6 @@
         <option value="$PROJECT_DIR$/Satellite/js/dat.gui.js" />
         <option value="$USER_HOME$/Desktop/index.html" />
         <option value="$PROJECT_DIR$/Radar/css/style.css" />
-        <option value="$PROJECT_DIR$/Radar/index2.html" />
         <option value="$PROJECT_DIR$/Satellite/js/index.js" />
         <option value="$PROJECT_DIR$/Slipping/leftandrightslipping.html" />
         <option value="$PROJECT_DIR$/Slipping/leftAndRightSlipping.html" />
@@ -96,8 +69,11 @@
         <option value="$PROJECT_DIR$/ScrollBox/scrollBox2.html" />
         <option value="$PROJECT_DIR$/Slipping/leftAndRightSlipping1.html" />
         <option value="$PROJECT_DIR$/Slipping/Slipping3.html" />
-        <option value="$PROJECT_DIR$/FrostedGlass/index.html" />
         <option value="$PROJECT_DIR$/FrostedGlass/demo.html" />
+        <option value="$PROJECT_DIR$/DirectionAware/index.html" />
+        <option value="$PROJECT_DIR$/Radar/index.html" />
+        <option value="$PROJECT_DIR$/Radar/index2.html" />
+        <option value="$PROJECT_DIR$/FrostedGlass/index.html" />
         <option value="$PROJECT_DIR$/FrostedGlass/style.css" />
       </list>
     </option>
@@ -113,9 +89,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="91" />
-    <option name="width" value="1288" />
-    <option name="height" value="784" />
+    <option name="x" value="54" />
+    <option name="y" value="20" />
+    <option name="width" value="1196" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -144,24 +121,10 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_JavaScript_Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_JavaScript_Demo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrostedGlass" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,11 +136,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\resource\image" />
       <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\FrostedGlass" />
       <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\DirectionAware" />
       <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo" />
       <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\Stats" />
-      <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\Radar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Learning\Workspace\PHP_WorkSpace\Test_JavaScript_Demo\Radar" />
@@ -302,26 +265,27 @@
       <workItem from="1515471589186" duration="426000" />
       <workItem from="1516627948995" duration="2205000" />
       <workItem from="1516630163294" duration="392000" />
+      <workItem from="1516683552834" duration="1854000" />
+      <workItem from="1516761059926" duration="4244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77557000" />
+    <option name="totallyTimeSpent" value="83655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="91" width="1288" height="784" extended-state="0" />
-    <editor active="true" />
+    <frame x="54" y="20" width="1196" height="722" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27442998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31426057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23089983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -354,13 +318,6 @@
     <entry file="file://$PROJECT_DIR$/JavaScript/index.html" />
     <entry file="file://$PROJECT_DIR$/JavaScript/index.html" />
     <entry file="file://$PROJECT_DIR$/JavaScript/index.js" />
-    <entry file="file://$PROJECT_DIR$/Keyboard/html/keyboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KaoShi/jquery-3.2.1.js" />
     <entry file="file://$PROJECT_DIR$/KaoHe/home.html" />
     <entry file="file://$PROJECT_DIR$/KaoShi/home.css" />
@@ -390,13 +347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="3663" column="67" lean-forward="true" selection-start-line="3663" selection-start-column="67" selection-end-line="3663" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeftSlippingBox/leftSlippingBox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="51" column="66" lean-forward="true" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -501,13 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Radar/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Slipping/leftAndRightSlipping2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -515,31 +458,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Radar/css/style.css">
+    <entry file="file://$PROJECT_DIR$/FrostedGlass/demo.html" />
+    <entry file="file://$PROJECT_DIR$/DirectionAware/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="114" column="8" lean-forward="true" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keyboard/html/keyboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Radar/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="94" lean-forward="true" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Radar/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Radar/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="95">
+          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DirectionAware/index.html">
+    <entry file="file://$PROJECT_DIR$/LeftSlippingBox/leftSlippingBox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="152">
+          <caret line="50" column="43" lean-forward="true" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrostedGlass/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="39" column="66" lean-forward="true" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Slipping/Slipping3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="81">
+          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <marker date="1515145333622" expanded="true" signature="1178:1201" ph="..." />
             <marker date="1515145333622" expanded="true" signature="2211:2234" ph="..." />
@@ -547,20 +530,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrostedGlass/demo.html" />
     <entry file="file://$PROJECT_DIR$/FrostedGlass/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrostedGlass/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="233">
+          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
