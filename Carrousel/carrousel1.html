@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+</head>
+<style>
+    .stage{
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #f0f0f0;
+        perspective: 800px;
+        transition: top .5s;
+        position: relative;
+        top: 0;
+    }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        width: 120px;
+        margin-left: -60px;
+        height: 100px;
+        margin-top: 300px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    .piece {
+        position: absolute;
+        bottom: 0;
+        width: 120px;
+        transition: opacity 1s, transform 1s;
+    }
+
+    .cos1{  transform: rotateY(0deg);  }
+    .cos2{  transform: rotateY(40deg);  }
+    .cos3{  transform: rotateY(80deg);  }
+    .cos4{  transform: rotateY(120deg);  }
+    .cos5{  transform: rotateY(160deg);  }
+    .cos6{  transform: rotateY(200deg);  }
+    .cos7{  transform: rotateY(240deg);  }
+    .cos8{  transform: rotateY(280deg);  }
+    .cos9{  transform: rotateY(320deg);  }
+</style>
+<body>
+<div id="stage" class="stage">
+    <div id="container" class="container cos1">
+        <img id="piece1" src="../Resource/image/warship/warship_200X320/lexgai.png" class="piece" style="transform: rotateY(0deg) translateZ(195.839px)">
+        <img id="piece2" src="../Resource/image/warship/warship_200X320/haimagai.png" class="piece" style="transform: rotateY(40deg) translateZ(195.839px)">
+        <img id="piece3" src="../Resource/image/warship/warship_200X320/maogai.png" class="piece" style="transform: rotateY(80deg) translateZ(195.839px)">
+        <img id="piece4" src="../Resource/image/warship/warship_200X320/ougengai.png" class="piece" style="transform: rotateY(120deg) translateZ(195.839px)">
+        <img id="piece5" src="../Resource/image/warship/warship_200X320/salagai.png" class="piece" style="transform: rotateY(160deg) translateZ(195.839px)">
+        <img id="piece6" src="../Resource/image/warship/warship_200X320/vvgai.png" class="piece" style="transform: rotateY(200deg) translateZ(195.839px)">
+        <img id="piece7" src="../Resource/image/warship/warship_200X320/zhaigai.png" class="piece" style="transform: rotateY(240deg) translateZ(195.839px)">
+        <img id="piece8" src="../Resource/image/warship/warship_200X320/lexgai.png" class="piece" style="transform: rotateY(280deg) translateZ(195.839px)">
+        <img id="piece9" src="../Resource/image/warship/warship_200X320/haimagai.png" class="piece" style="transform: rotateY(320deg) translateZ(195.839px)">
+    </div>
+</div>
+<script>
+$(document).ready(function () {
+    var i = 1;
+    $('#container').click(function () {
+        $('#container').removeClass('cos'+i);
+        if(i<10){++i;}else{i=1;}
+        $('#container').addClass('cos'+i);
+    });
+
+    $('.piece').hover(function () {
+        var data = ($(this).attr('style')).split(' ');
+        $(this).attr('style',data[0]+' '+'translateZ(0px)');
+    },function () {
+        var data = ($(this).attr('style')).split(' ');
+        $(this).attr('style',data[0]+' '+'translateZ(195.839px)');
+    });
+})
+</script>
+</body>
+</html>

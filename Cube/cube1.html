@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {list-style: none;}
+        ul {
+            width: 220px;
+            height: 220px;
+            margin: 220px auto;
+            position: relative;
+            transition: all 8s;
+            transform-style: preserve-3d;
+        }
+
+        ul li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            line-height: 150px;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        li:nth-child(1){
+            transform: rotateX(0deg) translateZ(110px);
+            background-color: orange;
+        }
+
+        li:nth-child(2){
+            transform: rotateX(-90deg) translateZ(110px);
+            background-color: yellow;
+        }
+
+        li:nth-child(6){
+            transform: rotateY(90deg) translateZ(110px);
+            background-color: purple;
+        }
+
+        ul:hover{
+            transform :rotateX(360deg) rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>百</li>
+    <li>度</li>
+    <li>经</li>
+    <li>验</li>
+    <li>好</li>
+    <li>啊</li>
+</ul>
+</body>
+</html>

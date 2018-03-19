@@ -22,10 +22,11 @@
     }
 }
 .anim_image {
-    width: 194px; /* 200 - 2 * 3(padding) */
-    height: 294px;
-    max-width: 194px;
-    max-height: 294px;
+    box-sizing: border-box;
+    width: 200px; /* 194 + 2 * 3(padding) */
+    height: 300px; /* 294 + 2 * 3(padding) */
+    max-width: 200px;
+    max-height: 300px;
     padding:3px;
     border:1px solid #beceeb;
     background-color:white;

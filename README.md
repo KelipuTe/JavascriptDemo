@@ -1,4 +1,7 @@
-# 有关JavaScript的样例
+# 有关 JavaScript 的样例
+
+样例大部分来自 GitHub 和 百度
+不在列表里的文件夹，表示还没有测试成功
 
 - AnimationImage：图片动画特效
 - ChatApp：基于 Node.js 的 Socket.io 的聊天室
