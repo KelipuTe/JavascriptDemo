@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <title>渐变和阴影</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main-container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .main-canvas{
+            border:1px dashed #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
+</div>
+<script>
+    var cv = document.getElementById("main-canvas");
+    var ctx = cv.getContext("2d");
+
+    // 渐变和阴影都可作用于文字
+
+    // 线性渐变
+    // createLinearGradient(x1,y1,x2,y2) 创建一个线形渐变对象
+    // x1,y1 表示渐变的起点， x2,y2 表示渐变的终点
+    // var liner = ctx.createLinearGradient(0,0,400,0); // 水平
+    // var liner = ctx.createLinearGradient(0,0,0,400); // 垂直
+    // var liner = ctx.createLinearGradient(0,0,400,400); // 对角
+    // liner.addColorStop(0,'red'); // 在某处添加渐变颜色值
+    // liner.addColorStop(0.5,'green');
+    // liner.addColorStop(1,'blue');
+    // ctx.fillStyle = liner;
+    // ctx.fillRect(0,0,400,400);
+
+    // 径向渐变
+    // createRadialGradient(x1,y1,r1,x2,y2,r2)
+    // x1,y1 起始点的圆心坐标，r1 起始点圆的半径
+    // x2,y2 结束点的圆心坐标，r2 结束点圆的半径
+    // var radial = ctx.createRadialGradient(250,150,100,200,200,200);
+    // radial.addColorStop(0,'red');
+    // radial.addColorStop(0.5,'green');
+    // radial.addColorStop(1,'blue');
+    // ctx.fillStyle = radial;
+    // ctx.beginPath();
+    // ctx.arc(200,200,200,0,360 * Math.PI / 180,false);
+    // ctx.closePath();
+    // ctx.fill();
+
+    // 阴影
+    ctx.shadowOffsetX = 0; // 水平阴影，正数向右偏移，负数向左偏移
+    ctx.shadowOffsetY = 0; // 垂直阴影，正数向下偏移，负数向上偏移
+    ctx.shadowColor = 'black'; // 阴影的颜色
+    ctx.shadowBlur = 10; // 阴影的模糊范围
+    ctx.fillStyle = 'red';
+    ctx.fillRect(100,100,200,200);
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5音乐示波器</title>
+    <style type="text/css">
+        .main-container {
+            width: 800px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #666666;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <canvas id="main-canvas" width="800" height="400"></canvas>
+    <input id="fileChooser" type="file" />
+    <div id="info"></div>
+</div>
+<script>
+    var canvas;
+    var ctx;
+    var audioContext;
+    var audioBufferSourceNode; // 用于播放解码出来的 buffer 的节点
+    var analyser; // 用于分析音频频谱的节点
+    var file;
+    var fileContent;
+
+    /* 这段代码详见 API 文档 */
+    function start(buffer) {
+        if(audioBufferSourceNode) {
+            audioBufferSourceNode.stop();
+        }
+        audioBufferSourceNode = audioContext.createBufferSource();
+        audioBufferSourceNode.connect(analyser);
+        analyser.connect(audioContext.destination);
+        audioBufferSourceNode.buffer = buffer;
+        audioBufferSourceNode.start(0);
+
+        var info = document.getElementById('info');
+        info.innerHTML="解析完成，开始播放";
+
+        window.requestAnimationFrame(draw); // 启动计时器
+    }
+
+    function draw() {
+        ctx.strokeStyle = "#66ffcc";
+        ctx.lineWidth = 2;
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        // 数组中每个元素是从 0 到 fftSize 属性值的数值，数组长度为 fftSize 的一半
+        var dataArray = new Uint8Array(analyser.frequencyBinCount);
+        // 将当前频率数据复制到传入的 Uint8Array （无符号字节数组）中，数组中的值不会超过 fftSize
+        analyser.getByteFrequencyData(dataArray);
+        // Math.round() 把一个数字舍入为最接近的整数
+        var step = Math.round(dataArray.length / 60); // round(128 / 60) = 2
+
+        // 数组中一共 128 个值，以 2 为步长获取 40 个值 用于显示
+        for (var i = 0; i < 40; i++) {
+            var energy = (dataArray[step * i] / 256.0) * 50; // 计算高度
+            // 绘制高度
+            for (var j = 0; j < energy; j++) {
+                ctx.beginPath();
+                ctx.moveTo(20 * i + 2, 300 - 4 * j);
+                ctx.lineTo(20 * (i + 1) - 2, 300 - 4 * j);
+                ctx.stroke();
+            }
+            // 绘制底边
+            ctx.beginPath();
+            ctx.moveTo(20 * i + 2, 300);
+            ctx.lineTo(20 * (i + 1) - 2, 300);
+            ctx.stroke();
+        }
+        window.requestAnimationFrame(draw);
+    }
+
+    window.onload = function() {
+        audioContext = new AudioContext(); // 实例化 AudioContext 对象
+        // createAnalyser() 方法创建一个 AnalyserNode 可以用来获取音频时间和频率数据
+        analyser = audioContext.createAnalyser();
+        // AnalyserNode 接口的 fftSize 属性的值是一个无符号长整型的值用于确定频域的 FFT(快速傅里叶变换) 的大小
+        analyser.fftSize = 256;
+
+        canvas = document.getElementById('main-canvas');
+        ctx = canvas.getContext("2d");
+
+        var fileChooser = document.getElementById('fileChooser');
+        fileChooser.onchange = function() {
+            if (fileChooser.files[0]) {
+                var info = document.getElementById('info');
+                info.innerHTML="获取文件，开始解析";
+
+                file = fileChooser.files[0];
+                var fileReader = new FileReader();
+                fileReader.readAsArrayBuffer(file);
+                fileReader.onload = function(e) {
+                    fileContent = e.target.result;
+                    // 读取到的音频文件是二进制类型，让 AudioContext 先对其解码
+                    audioContext.decodeAudioData(fileContent, function(buffer) {
+                        start(buffer);
+                    });
+                };
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

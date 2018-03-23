@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <title>定时器</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main-box{
+            width: 50px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #66ffcc;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+<div id="main-box" class="main-box">0%</div>
+<button id="main-button">run</button>
+<script>
+    var timer = null;
+
+    // setTimeout(方法,时间间隔) setTimeout() 方法只执行一次
+    // 如果需要展示动画，需要在方法中再次调用 setTimeout()
+    /*function run(){
+        var boxWidth = $('#main-box').css('width');
+        boxWidth = boxWidth.substring(0,boxWidth.length-2);
+        boxWidth = parseInt(boxWidth);
+        if(boxWidth < 250){
+            boxWidth = boxWidth + 20;
+            $('#main-box').css('width',boxWidth);
+            $('#main-box').html((boxWidth-50)/2+'%');
+            timer = setTimeout(run,200);
+        }else{
+            clearTimeout(timer);
+        }
+    }
+    $('#main-button').on('click',function () {
+        timer = setTimeout(run,200);
+    });*/
+
+    // requestAnimationFrame
+    // 简单概括 requestAnimationFrame 是由浏览器专门为动画提供的API
+    // 性能高，不会卡屏，根据不同的浏览器自动调整帧率
+    // 使用方式跟定时器 setTimeout 差不多，不同之处在于，不需要设置时间间隔参数
+    function run(){
+        var boxWidth = $('#main-box').css('width');
+        boxWidth = boxWidth.substring(0,boxWidth.length - 2);
+        boxWidth = parseInt(boxWidth);
+        if(boxWidth < 250){
+            boxWidth = boxWidth + 20;
+            $('#main-box').css('width',boxWidth);
+            $('#main-box').html( (boxWidth - 50) / 2 + '%');
+            timer = requestAnimationFrame(move);
+        } else {
+            cancelAnimationFrame(timer); // 关闭定时器
+        }
+    }
+    $('#main-button').on('click',function () {
+        timer = requestAnimationFrame(run);
+        // console.log(timer); // 返回值是一个整数，用来表示定时器的编号
+    });
+</script>
+</body>
+</html>

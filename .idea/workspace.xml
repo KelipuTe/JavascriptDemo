@@ -2,46 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bfd1128-0dcb-476f-8540-682e0b78b89a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/AnimationImage/frostedGlass.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/BlackTechnology/blackTechnology01.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/Canvas01.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/Canvas02.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/Canvas03.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/Canvas04.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/Canvas08.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Rotate/rotate01.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Rotate/rotate02.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Rotate/rotate04.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Rotate/rotate05.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Slipping/slipping4.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SlippingBox/SlippingBox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas05.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas06.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas08.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas09.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Carrousel/carrouse2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Carrousel/carrousel1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ChatApp/index.html" afterPath="$PROJECT_DIR$/ChatApp/chat.html" />
-      <change beforePath="$PROJECT_DIR$/ChatApp/index.js" afterPath="$PROJECT_DIR$/ChatApp/chat.js" />
-      <change beforePath="$PROJECT_DIR$/Cube/cube1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Cube/cube2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrostedGlass/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrostedGlass/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Keyboard/css/keyboard.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Keyboard/html/keyboard.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Keyboard/js/keyboard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/LeftSlippingBox/css/leftSlippingBox.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/LeftSlippingBox/images/off.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/LeftSlippingBox/images/open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/LeftSlippingBox/leftSlippingBox.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Radar/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Radar/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Radar/index2.html" afterPath="$PROJECT_DIR$/Radar/radar.html" />
-      <change beforePath="$PROJECT_DIR$/Satellite/css/style.css" afterPath="$PROJECT_DIR$/Satellite/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/Satellite/index.html" afterPath="$PROJECT_DIR$/Satellite/index.html" />
-      <change beforePath="$PROJECT_DIR$/Satellite/js/index.js" afterPath="$PROJECT_DIR$/Satellite/js/index.js" />
-      <change beforePath="$PROJECT_DIR$/ScrollBox/scrollBox.html" afterPath="$PROJECT_DIR$/Scroll/scrollBox1.html" />
-      <change beforePath="$PROJECT_DIR$/ScrollBox/scrollBox2.html" afterPath="$PROJECT_DIR$/Scroll/scrollBox2.html" />
-      <change beforePath="$PROJECT_DIR$/Slipping/Slipping3.html" afterPath="$PROJECT_DIR$/Slipping/slipping3.html" />
-      <change beforePath="$PROJECT_DIR$/Slipping/leftAndRightSlipping1.html" afterPath="$PROJECT_DIR$/Slipping/slipping1.html" />
-      <change beforePath="$PROJECT_DIR$/Slipping/leftAndRightSlipping2.html" afterPath="$PROJECT_DIR$/Slipping/slipping2.html" />
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas01.html" afterPath="$PROJECT_DIR$/Canvas/canvas01.html" />
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas02.html" afterPath="$PROJECT_DIR$/Canvas/canvas02.html" />
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas03.html" afterPath="$PROJECT_DIR$/Canvas/canvas03.html" />
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas04.html" afterPath="$PROJECT_DIR$/Canvas/canvas04.html" />
+      <change beforePath="$PROJECT_DIR$/Canvas/Canvas08.html" afterPath="$PROJECT_DIR$/Canvas/canvas07.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,16 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Canvas04.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Canvas/Canvas04.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -85,6 +45,16 @@
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvas09.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Canvas/canvas09.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,13 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/KaoShi/biaodan.css" />
-        <option value="$PROJECT_DIR$/KaoShi/home.html" />
-        <option value="$PROJECT_DIR$/Satellite/js/dat.gui.js" />
-        <option value="$USER_HOME$/Desktop/index.html" />
-        <option value="$PROJECT_DIR$/Radar/css/style.css" />
-        <option value="$PROJECT_DIR$/Slipping/leftandrightslipping.html" />
-        <option value="$PROJECT_DIR$/Slipping/leftAndRightSlipping.html" />
         <option value="$PROJECT_DIR$/Slipping/leftAndRightSlipping2.html" />
         <option value="$PROJECT_DIR$/Stats/index.html" />
         <option value="$PROJECT_DIR$/ScrollBox/scrollBox2.html" />
@@ -175,6 +138,13 @@
         <option value="$PROJECT_DIR$/Canvas/Canvas02.html" />
         <option value="$PROJECT_DIR$/Canvas/Canvas03.html" />
         <option value="$PROJECT_DIR$/Canvas/Canvas04.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas03.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas02.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas05.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas07.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas04.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas06.html" />
+        <option value="$PROJECT_DIR$/Canvas/canvas09.html" />
       </list>
     </option>
   </component>
@@ -189,8 +159,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="399" />
-    <option name="y" value="23" />
+    <option name="x" value="27" />
+    <option name="y" value="22" />
     <option name="width" value="1274" />
     <option name="height" value="716" />
   </component>
@@ -215,11 +185,6 @@
             <path>
               <item name="Test_JavaScript_Demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test_JavaScript_Demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Test_JavaScript_Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Test_JavaScript_Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="BlackTechnology" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Test_JavaScript_Demo" type="b2602c69:ProjectViewProjectNode" />
@@ -420,12 +385,12 @@
       <workItem from="1521700294856" duration="3796000" />
       <workItem from="1521708765883" duration="36000" />
       <workItem from="1521708846813" duration="11389000" />
-      <workItem from="1521764538791" duration="5393000" />
+      <workItem from="1521764538791" duration="26837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171721000" />
+    <option name="totallyTimeSpent" value="193165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,7 +402,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="399" y="23" width="1274" height="716" extended-state="1" />
+    <frame x="27" y="22" width="1274" height="716" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20307444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -471,22 +436,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Slipping/slipping2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrostedGlass/demo.html" />
-    <entry file="file://$PROJECT_DIR$/DirectionAware/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Radar/css/style.css" />
     <entry file="file://$PROJECT_DIR$/LeftSlippingBox/css/leftSlippingBox.css" />
     <entry file="file://$PROJECT_DIR$/Rotate/rotate01.html" />
     <entry file="file://$PROJECT_DIR$/Carrousel/carrouse2.html" />
@@ -714,6 +663,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas08.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas06.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas07.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -732,42 +721,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/Canvas02.html">
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas04.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="190">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/Canvas01.html">
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas03.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="322">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/Canvas08.html">
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas05.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+        <state relative-caret-position="95">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/Canvas03.html">
+    <entry file="file://$PROJECT_DIR$/Canvas/canvas09.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/Canvas04.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>

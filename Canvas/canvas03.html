@@ -19,8 +19,8 @@
 </head>
 <div class="main-container">
     <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
-    <!--<img id="img" src="../Resource/image/avatar/default_avatar.jpg">-->
-    <button id="button">button</button>
+    <!--<img id="main-img" src="../Resource/image/avatar/default_avatar.jpg">-->
+    <button id="main-button">button</button>
 </div>
 <script>
     var cv = document.getElementById("main-canvas");
@@ -37,10 +37,10 @@
     //     ctx.drawImage(img,100,100);
     // }
     // 加载页面上的图片并调整大小
-    // var img = document.getElementById('img');
+    // var img = document.getElementById('main-img');
     // ctx.drawImage(img,100,100,50,50);
     // 加载页面上的图片并裁剪
-    // var img = document.getElementById('img');
+    // var img = document.getElementById('main-img');
     // ctx.drawImage(img,0,0,50,50,100,100,50,50);
 
     // 切割图片
@@ -62,7 +62,7 @@
     // ctx.stroke();
     // ctx.closePath();
     // ctx.clip();
-    // $('#button').on('click',function () {
+    // $('#main-button').on('click',function () {
     //     var img = new Image();
     //     img.src = '../Resource/image/avatar/default_avatar.jpg';
     //     img.onload = function () {
@@ -84,7 +84,7 @@
         ctx.drawImage(img,0,0);
     }
 
-    $('#button').on('click',function () {
+    $('#main-button').on('click',function () {
         ctx.restore(); // 恢复画布的状态
         var img = new Image();
         img.src = '../Resource/image/avatar/ougen.jpg';

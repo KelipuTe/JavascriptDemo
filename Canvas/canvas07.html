@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main-container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .main-canvas{
+            border:1px dashed #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
+    <button id="main-button">button</button>
+</div>
+</body>
+<script>
+    function Ball(x,y,r,color,speed,angle){
+        this.x = x || 0;
+        this.y = y || 0;
+        this.radius = r || 20;
+        this.color = color || '#66ccff';
+        this.speed = speed || 1;
+        this.angle = angle || 0;
+        this.vx = speed * Math.cos( angle * Math.PI / 180 );
+        this.vy = speed * Math.sin( angle * Math.PI / 180 );
+    }
+    Ball.prototype = {
+        constructor:Ball,
+        stroke:function(cxt){
+            cxt.strokeStyle = this.color;
+            cxt.beginPath();
+            cxt.arc( this.x, this.y, this.radius, 0, 2 * Math.PI );
+            cxt.closePath();
+            cxt.stroke();
+        },
+        fill:function(cxt){
+            cxt.fillStyle = this.color;
+            cxt.beginPath();
+            cxt.arc( this.x, this.y, this.radius, 0, 2 * Math.PI );
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    var cv = document.getElementById("main-canvas");
+    var cxt = cv.getContext("2d");
+    var timer = null;
+    var balls = [];
+    var n = 30;
+
+    for(var i = 0;i < n ;++i){
+        var speed = Math.random() * 2 + 1;
+        var angle = Math.random() * 360;
+        var ball = new Ball(200,200,5,'#66ffcc',speed,angle);
+        balls.push(ball);
+    }
+
+    function move(){
+        cxt.clearRect(0,0,400,400);
+        balls.forEach(function (ball) {
+            ball.fill(cxt);
+            if(ball.x >= 0 && ball.x <= 400 && ball.y >= 0 && ball.y <= 400){
+                ball.x += ball.vx;
+                ball.y += ball.vy;
+            } else {
+                ball.x = 200;
+                ball.y = 200;
+            }
+        });
+        timer = requestAnimationFrame(move);
+    }
+    $('#main-button').on('click',function () {
+        timer = requestAnimationFrame(move);
+    });
+</script>
+</html>

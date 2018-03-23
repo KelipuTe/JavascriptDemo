@@ -15,7 +15,7 @@
         .main-canvas{
             border:1px dashed #aaa;
         }
-        .info{
+        .main-info{
             width: 400px;
         }
     </style>
@@ -23,7 +23,7 @@
 <body>
 <div class="main-container">
     <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
-    <div id="info" class="info"></div>
+    <div id="main-info" class="main-info"></div>
 </div>
 <script>
     var cv = document.getElementById("main-canvas");
@@ -34,7 +34,7 @@
     $('#main-canvas').on('mousemove',function (event) {
         var x = event.clientX - $('#main-canvas').offset().left;
         var y = event.clientY - $('#main-canvas').offset().top;
-        $('#info').html('相对位置：'+x+','+y);
+        $('#main-info').html('相对位置：'+x+','+y);
         ctx.clearRect(0,0,width,height);
         ctx.beginPath();
         ctx.moveTo(x,0);
