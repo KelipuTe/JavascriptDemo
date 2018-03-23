@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bfd1128-0dcb-476f-8540-682e0b78b89a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas05.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas06.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas08.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Canvas/canvas09.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas01.html" afterPath="$PROJECT_DIR$/Canvas/canvas01.html" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas02.html" afterPath="$PROJECT_DIR$/Canvas/canvas02.html" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas03.html" afterPath="$PROJECT_DIR$/Canvas/canvas03.html" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas04.html" afterPath="$PROJECT_DIR$/Canvas/canvas04.html" />
-      <change beforePath="$PROJECT_DIR$/Canvas/Canvas08.html" afterPath="$PROJECT_DIR$/Canvas/canvas07.html" />
-    </list>
+    <list default="true" id="1bfd1128-0dcb-476f-8540-682e0b78b89a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +147,7 @@
     <handled-path value="$PROJECT_DIR$/ChatApp/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="27" />
     <option name="y" value="22" />
     <option name="width" value="1274" />
@@ -385,12 +374,12 @@
       <workItem from="1521700294856" duration="3796000" />
       <workItem from="1521708765883" duration="36000" />
       <workItem from="1521708846813" duration="11389000" />
-      <workItem from="1521764538791" duration="26837000" />
+      <workItem from="1521764538791" duration="26866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193165000" />
+    <option name="totallyTimeSpent" value="193194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,8 +391,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="22" width="1274" height="716" extended-state="1" />
-    <editor active="true" />
+    <frame x="27" y="22" width="1274" height="716" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20307444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
