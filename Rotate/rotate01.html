@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立方体</title>
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        /* 确定观察视角和容器位置*/
+        .model-stage{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px auto;
+            background-color: #f0f0f0;
+            perspective: 800px;
+        }
+        .model-container{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 5s;
+        }
+        /* 确定图片在容器内的位置 */
+        .model-side{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        .model-front{
+            z-index:2;
+            transform:translateZ(100px);
+        }
+        .model-back{
+            z-index:1;
+            transform:translateZ(-100px) rotateY(180deg);
+        }
+        .model-left{
+            left: -200px;
+            transform-origin: right;
+            transform:translateZ(100px) rotateY(-90deg);
+        }
+        .model-right{
+            left: 200px;
+            transform-origin: left;
+            transform:translateZ(100px) rotateY(90deg);
+        }
+        .model-top{
+            top: -200px;
+            transform-origin: bottom;
+            transform:translateZ(100px) rotateX(90deg);
+        }
+        .model-bottom{
+            top: 200px;
+            transform-origin: top;
+            transform:translateZ(100px) rotateX(-90deg);
+        }
+        /* 旋转容器 */
+        .model-container-show-front{ transform: rotateY(0deg); }
+        .model-container-show-back{ transform: rotateY(180deg); }
+        .model-container-show-left{ transform: rotateY(90deg); }
+        .model-container-show-right{ transform: rotateY(-90deg); }
+        .model-container-show-top{ transform: rotateX(-90deg); }
+        .model-container-show-bottom{ transform: rotateX(90deg); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="model-stage">
+            <div class="model-container" id="model-container">
+                <img class="model-side model-front" src="../Resource/image/warship/warship_200X320/lexgai.png">
+                <img class="model-side model-back" src="../Resource/image/warship/warship_200X320/vvgai.png">
+                <img class="model-side model-left" src="../Resource/image/warship/warship_200X320/maogai.png">
+                <img class="model-side model-right" src="../Resource/image/warship/warship_200X320/haimagai.png">
+                <img class="model-side model-top" src="../Resource/image/warship/warship_200X320/zhaigai.png">
+                <img class="model-side model-bottom" src="../Resource/image/warship/warship_200X320/ougengai.png">
+            </div>
+        </div>
+    </div>
+    <div class="row text-center" style="">
+        <button class="btn btn-primary" id="btn-front">前视图</button>
+        <button class="btn btn-primary" id="btn-back">后视图</button>
+        <button class="btn btn-primary" id="btn-left">左视图</button>
+        <button class="btn btn-primary" id="btn-right">右视图</button>
+        <button class="btn btn-primary" id="btn-top">顶视图</button>
+        <button class="btn btn-primary" id="btn-bottom">底视图</button>
+        <button class="hidden" id="btn-prev"></button>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#btn-front').on('click',function () { containerShow('front'); });
+        $('#btn-back').on('click',function () { containerShow('back'); });
+        $('#btn-left').on('click',function () { containerShow('left'); });
+        $('#btn-right').on('click',function () { containerShow('right'); });
+        $('#btn-top').on('click',function () { containerShow('top'); });
+        $('#btn-bottom').on('click',function () { containerShow('bottom'); });
+    });
+
+    function containerShow(direction) {
+        var prev = $('#btn-prev').text();
+        $('#model-container').removeClass(prev);
+        $('#model-container').addClass('model-container-show-'+direction);
+        $('#btn-prev').text('model-container-show-'+direction)
+    }
+</script>
+</body>
+</html>

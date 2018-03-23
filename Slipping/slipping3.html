@@ -3,8 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/htmaxCount; charset=utf-8" />
     <title>滑动展示</title>
-    <!--<script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>-->
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
     <style type="text/css">
         .slipping-show {
             width:100px;
@@ -43,20 +42,10 @@
         for(y = 1;y <= MAX_Y;++y){
             $("#slipping-container-"+x).append("<div class='slipping-show slipping-show-"+x+y+"'></div>"); // 添加观察窗口元素
             $(".slipping-show-"+x+y).append("<div class='slipping-main slipping-main-"+x+y+"'></div>"); // 添加载体元素
-            $(".slipping-show-"+x+y).hover(
-                function(){
-                    console.log($(this).position().left-mainWidth);
-                    console.log($(this).position().left-mainWidth);
-                    $(this).animate({left:$(this).position().left-mainWidth,opacity:1},500,function(){});
-                },
-                function(){
-                    console.log("out");
-                    $(this).animate({left:$(this).position().left+mainWidth,opacity:1},500,function(){});
-                });
             /* 添加图片 */
+            $(".slipping-main-"+x+y).width(mainWidth*2); // 设置载体元素宽度，滑动时滑动的距离是固定的
             $(".slipping-main-"+x+y).append("<div class='slipping-box'><img src='/image/avatar/ougen.jpg' style='width:100px;height:60px'></div>");
             $(".slipping-main-"+x+y).append("<div class='slipping-box'></div>"); // 添加空白
-            $(".slipping-main-"+x+y).width(mainWidth*2); // 设置载体元素宽度，滑动时滑动的距离是固定的
             right(x,y); // 载体元素左移，显示空白部分，隐藏图片部分
         }
         setTimeout("slippingContainerShow("+x+")",x*500); // 第 x 排横向元素，显示的时间推迟 x * 0.5 秒

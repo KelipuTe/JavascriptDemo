@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向的旋转木马</title>
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        /* 确定观察视角和容器位置*/
+        .model-stage{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            perspective: 800px;
+            transition: 1s;
+        }
+        .model-container {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            margin-top: 200px;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        /* 图片宽度要和容器宽度一样，不然旋转时会产生横向位移 */
+        .model-piece {
+            width: 150px;
+            position: absolute;
+            transition: transform 1s;
+        }
+        /* 确定图片在容器内的位置 */
+        .piece1{ transform: rotateY(0deg) translateZ(200px); }
+        .piece2{ transform: rotateY(45deg) translateZ(200px); }
+        .piece3{ transform: rotateY(90deg) translateZ(200px); }
+        .piece4{ transform: rotateY(135deg) translateZ(200px); }
+        .piece5{ transform: rotateY(180deg) translateZ(200px); }
+        .piece6{ transform: rotateY(225deg) translateZ(200px); }
+        .piece7{ transform: rotateY(270deg) translateZ(200px); }
+        .piece8{ transform: rotateY(315deg) translateZ(200px); }
+        /* 旋转容器 */
+        .angle1{  transform: rotateY(0deg);  }
+        .angle2{  transform: rotateY(-45deg);  }
+        .angle3{  transform: rotateY(-90deg);  }
+        .angle4{  transform: rotateY(-135deg);  }
+        .angle5{  transform: rotateY(-180deg);  }
+        .angle6{  transform: rotateY(-225deg);  }
+        .angle7{  transform: rotateY(-270deg);  }
+        .angle8{  transform: rotateY(-315deg);  }
+    </style>
+</head>
+<body>
+<div id="model-stage" class="model-stage">
+    <div id="model-container" class="model-container angle1">
+        <img id="piece1" src="../Resource/image/warship/warship_200X320/lexgai.png" class="model-piece piece1">
+        <img id="piece2" src="../Resource/image/warship/warship_200X320/ougengai.png" class="model-piece piece2">
+        <img id="piece3" src="../Resource/image/warship/warship_200X320/lexgai.png" class="model-piece piece3">
+        <img id="piece4" src="../Resource/image/warship/warship_200X320/ougengai.png" class="model-piece piece4">
+        <img id="piece5" src="../Resource/image/warship/warship_200X320/lexgai.png" class="model-piece piece5">
+        <img id="piece6" src="../Resource/image/warship/warship_200X320/ougengai.png" class="model-piece piece6">
+        <img id="piece7" src="../Resource/image/warship/warship_200X320/lexgai.png" class="model-piece piece7">
+        <img id="piece8" src="../Resource/image/warship/warship_200X320/ougengai.png" class="model-piece piece8">
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        /* 旋转木马横向旋转 */
+        var i = 1;
+        $('#model-container').on('click',function () {
+            $('#model-container').removeClass('angle' + i);
+            if(i < 9){ ++i; } else { i = 1; }
+            $('#model-container').addClass('angle' + i);
+        });
+        /* 全局监听键盘 keydown 事件 */
+        var doKeypress = false;
+        $(document).on('keydown',function () {
+            if(!doKeypress){
+                $('#piece'+ i).removeClass('piece' + i);
+                var addStyle = 'transform: rotateY('+ 45 * (i - 1) +'deg) translateZ(250px);';
+                $('#piece'+ i).attr('style',addStyle);
+                doKeypress = true;
+            } else {
+                $('#piece'+ i).attr('style','');
+                $('#piece'+ i).addClass('piece' + i);
+                doKeypress = false;
+            }
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应鼠标方向的横置的3区块显示</title>
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        .model-stage{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            perspective: 800px;
+        }
+        .model-container{
+            width: 360px;
+            height: 600px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -300px;
+            transform-style: preserve-3d;
+            transition: all 1s 0s linear;
+        }
+        .model-panel{
+            width: 360px;
+            height: 600px;
+            position: absolute;
+            background-color: #719eff;
+            transition: all 1s 0s linear;
+        }
+        .model-panel-left{
+            left: -360px;
+            transform: rotateY(15deg) translateZ(0);
+        }
+        .model-panel-center{
+            transform: rotateY(0) translateZ(-46.58px); /* 46.58=180*sin(15) */
+        }
+        .model-panel-right{
+            left: 360px;
+            transform: rotateY(-15deg) translateZ(0);
+        }
+    </style>
+</head>
+<body>
+<div class="model-stage">
+    <div id="model-container" class="model-container">
+        <div class="model-panel model-panel-left"></div>
+        <div class="model-panel model-panel-center text-center"></div>
+        <div class="model-panel model-panel-right"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).on('mousemove',function (event) {
+        var angelX = ((event.clientX - (window.innerWidth / 2)) / (window.innerWidth / 2)) * 15;
+        var angelY = (((window.innerHeight / 2) -event.clientY) / (window.innerHeight / 2)) * 15;
+        $('.model-container').css('transform','rotateX('+angelY+'deg) rotateY('+angelX+'deg)');
+    });
+</script>
+</body>
+</html>

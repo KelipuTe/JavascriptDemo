@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="ss" style="position: relative; width: 100px;height: 100px;overflow: hidden;margin-left: ">
+<div id="sss" class="box" style="position: absolute; left: 100px;transition: 1s;">aaa</div>
+</div>
+<script>
+$('#ss').hover(function () {
+    $('#ss').css('left','0')
+})
+</script>
+</body>
+</html>

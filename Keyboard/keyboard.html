@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘规律按键响应</title>
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div id="secret" class="hide">
+    <p>隐藏内容</p>
+</div>
+<script>
+    $(document).ready(function () {
+        var secret = [38,38,40,40,37,37,39,39,66,65,66,65]; /* 上上下下左左右右BABA */
+        var keyLocation = 0;
+        $(document).keydown(function(event){
+            if(event.keyCode == secret[keyLocation]){
+                ++keyLocation;
+                if(keyLocation == 12){
+                    $("#secret").removeClass('hide');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

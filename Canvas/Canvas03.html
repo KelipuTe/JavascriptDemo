@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <title>图片和裁剪</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main-container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .main-canvas{
+            border:1px dashed #aaa;
+        }
+    </style>
+</head>
+<div class="main-container">
+    <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
+    <!--<img id="img" src="../Resource/image/avatar/default_avatar.jpg">-->
+    <button id="button">button</button>
+</div>
+<script>
+    var cv = document.getElementById("main-canvas");
+    var ctx = cv.getContext("2d");
+
+    // drawImage(image,dx,dy) // dx,dy 图片加载到 canvas 上的坐标
+    // drawImage(image,dx,dy,dw,dh) // dw,dh 调整宽度与高度
+    // drawImage(image,sx,sy,sw,sh,dx,dy,dw,dh) // sx,sy,sw,sh 裁剪图片的某部分
+    // 加载动态生成的图片
+    // var img = new Image();
+    // img.src = '../Resource/image/avatar/default_avatar.jpg';
+    // // 这里要调用 onload() 方法加载动态生成的图片
+    // img.onload = function () {
+    //     ctx.drawImage(img,100,100);
+    // }
+    // 加载页面上的图片并调整大小
+    // var img = document.getElementById('img');
+    // ctx.drawImage(img,100,100,50,50);
+    // 加载页面上的图片并裁剪
+    // var img = document.getElementById('img');
+    // ctx.drawImage(img,0,0,50,50,100,100,50,50);
+
+    // 切割图片
+    // ctx.beginPath(); // 切割区域
+    // ctx.strokeStyle = '#66ccff';
+    // ctx.arc(200,200,200,0,360 * Math.PI / 180,false); // 如果是矩形需要用 rect()
+    // ctx.stroke();
+    // ctx.closePath();
+    // ctx.clip(); // 切割图片
+    // ctx.beginPath(); // 被剪切的素材
+    // ctx.fillStyle = 'red';
+    // ctx.fillRect(200,200,200,200);
+    // ctx.closePath();
+
+    // 切割动态加载的图片
+    // ctx.beginPath();
+    // ctx.strokeStyle = '#66ccff';
+    // ctx.arc(200,200,200,0,360 * Math.PI / 180,false);
+    // ctx.stroke();
+    // ctx.closePath();
+    // ctx.clip();
+    // $('#button').on('click',function () {
+    //     var img = new Image();
+    //     img.src = '../Resource/image/avatar/default_avatar.jpg';
+    //     img.onload = function () {
+    //         ctx.drawImage(img,0,0);
+    //     }
+    // });
+
+    // 还原画布到某个状态
+    ctx.save(); // 保存画布的状态
+    ctx.beginPath();
+    ctx.strokeStyle = '#66ccff';
+    ctx.arc(200,200,200,0,360 * Math.PI / 180,false);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.clip();
+    var img = new Image();
+    img.src = '../Resource/image/avatar/default_avatar.jpg';
+    img.onload = function () {
+        ctx.drawImage(img,0,0);
+    }
+
+    $('#button').on('click',function () {
+        ctx.restore(); // 恢复画布的状态
+        var img = new Image();
+        img.src = '../Resource/image/avatar/ougen.jpg';
+        img.onload = function () {
+            ctx.drawImage(img,0,0);
+        }
+    });
+
+</script>
+</html>

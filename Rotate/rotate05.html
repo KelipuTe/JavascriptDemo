@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3X3的区块显示</title>
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        .model-stage{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -90px;
+            margin-top: -90px;
+            perspective: 800px;
+        }
+        .model-container{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -90px;
+            margin-top: -90px;
+            transform-style: preserve-3d;
+            transition: all 1s 0s linear;
+        }
+        .model-panel{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            background-color: #719eff;
+            transition: all 1s 0s linear;
+        }
+        .model-panel-northwest{
+            top: -200px;
+            left: -200px;
+            transform: rotateX(-30deg) rotateY(30deg) translateZ(0);
+        }
+        .model-panel-north{
+            top: -200px;
+            transform-origin: top;
+            transform: rotateX(-30deg) rotateY(0) translateZ(0);
+        }
+        .model-panel-northeast{
+            top: -200px;
+            left: 200px;
+            transform: rotateX(-30deg) rotateY(-30deg) translateZ(0);
+        }
+        .model-panel-west{
+            left: -200px;
+            transform-origin: left;
+            transform: rotateX(0) rotateY(30deg) translateZ(0);
+        }
+        .model-panel-center{
+            transform: rotateX(0) rotateY(0) translateZ(-90px); /* 180*sin(30) */
+        }
+        .model-panel-east{
+            left: 200px;
+            transform-origin: right;
+            transform: rotateX(0) rotateY(-30deg) translateZ(0);
+        }
+        .model-panel-southwest{
+            top: 200px;
+            left: -200px;
+            transform: rotateX(30deg) rotateY(30deg) translateZ(0);
+        }
+        .model-panel-south{
+            top: 200px;
+            transform-origin: bottom;
+            transform: rotateX(30deg) rotateY(0) translateZ(0);
+        }
+        .model-panel-southeast{
+            top: 200px;
+            left: 200px;
+            transform: rotateX(30deg) rotateY(-30deg) translateZ(0);
+        }
+    </style>
+</head>
+<body>
+<div class="model-stage">
+    <div id="model-container" class="model-container">
+        <div class="model-panel model-panel-northwest"></div>
+        <div class="model-panel model-panel-north"></div>
+        <div class="model-panel model-panel-northeast"></div>
+        <div class="model-panel model-panel-west"></div>
+        <div class="model-panel model-panel-center"></div>
+        <div class="model-panel model-panel-east"></div>
+        <div class="model-panel model-panel-southwest"></div>
+        <div class="model-panel model-panel-south"></div>
+        <div class="model-panel model-panel-southeast"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单滑动效果</title>
+	<link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<style>
+	    .list_dt{
+            background: #333;
+            color: white;
+            width: 120px;
+            padding: 0 40px 0 20px;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: relative;
+            border-bottom: 1px solid #464646;
+        }
+        .list_dt:hover{
+            background: #222;
+        }
+        .list_dt:hover ._after{
+            display: block;
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4285F4;
+        }
+        #open{
+            background: #222;
+        }
+        #open ._after{
+            display: block;
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4285F4;
+        }
+        .list_dt_icon{
+            position: absolute;
+            right: 10px;
+            top: 9px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("off.png") no-repeat;
+        }
+        #open .list_dt_icon{
+            background: url("open.png") no-repeat;
+        }
+        .list_dd{
+            display: none;
+        }
+        .list_li{
+            background: #4e4e4e;
+            list-style-type: none;
+            color: white;
+            width: 120px;
+            padding: 0 30px;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+            border-bottom: 1px solid #6b6b6b;
+        }
+        .list_li:hover{
+            background: #4285F4;
+        }
+	</style>
+</head>
+<body>
+<div>
+    <dl class="list_dl">
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <span>a</span>
+            <span class="list_dt_icon"></span>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">1</li>
+                <li class="list_li">2</li>
+                <li class="list_li">3</li>
+            </ul>
+        </dd>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <span>b</span>
+            <span class="list_dt_icon"></span>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">1</li>
+                <li class="list_li">2</li>
+                <li class="list_li">3</li>
+                <li class="list_li">4</li>
+                <li class="list_li">5</li>
+                <li class="list_li">6</li>
+            </ul>
+        </dd>
+    </dl>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".list_dt").on("click",function () {
+            $('.list_dd').stop();
+            $(this).siblings("dt").removeAttr("id");
+            if($(this).attr("id")=="open"){
+                $(this).removeAttr("id").siblings("dd").slideUp();
+            }else{
+                $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8' />
+    <title>鼠标响应</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main-container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .main-canvas{
+            border:1px dashed #aaa;
+        }
+        .info{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
+    <div id="info" class="info"></div>
+</div>
+<script>
+    var cv = document.getElementById("main-canvas");
+    var ctx = cv.getContext("2d");
+    var width = 400;
+    var height = 400;
+
+    $('#main-canvas').on('mousemove',function (event) {
+        var x = event.clientX - $('#main-canvas').offset().left;
+        var y = event.clientY - $('#main-canvas').offset().top;
+        $('#info').html('相对位置：'+x+','+y);
+        ctx.clearRect(0,0,width,height);
+        ctx.beginPath();
+        ctx.moveTo(x,0);
+        ctx.lineTo(x,height);
+        ctx.moveTo(0,y);
+        ctx.lineTo(width,y);
+        ctx.strokeStyle = '#66ffcc';
+        ctx.stroke();
+    });
+</script>
+</body>
+</html>

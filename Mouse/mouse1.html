@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>鼠标拖动</title>
+    <link type="text/css" rel="stylesheet" href="../ThirdPartyLibrary/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style type="text/css">
+        #picture{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="picture">
+    <img src="../Resource/image/avatar/default_avatar.jpg" style="width:100px;height:100px"/>
+</div>
+<script type="text/javascript">
+    /*
+     * 构造拖动函数
+     * 思路：当鼠标按下时，记录鼠标和目标的相对距离并绑定移动和结束事件
+     * 移动时，通过获取的鼠标坐标和相对距离计算目标的位置
+     * 鼠标松开时，解除移动和结束事件绑定
+     * 不解除移动事件绑定无法结束移动
+     * 不解除结束事件绑定会导致结束函数一直触发
+     */
+    var drag = function (obj) {
+        var getX; // 记录鼠标按下时，鼠标和目标的 x轴 相对距离
+        var getY; // 记录鼠标按下时，鼠标和目标的 y轴 相对距离
+        obj.on('mousedown',start); // 为目标绑定事件
+        /* 开始 */
+        function start(event){
+            // 判断是否点击鼠标左键
+            if(event.button == 0){
+                // clientX 和 clientY 代表鼠标当前的横纵坐标
+                // offset() 方法返回的对象的：left 和 top，以像素计
+                getX = event.clientX - $("#picture").offset().left;
+                getY = event.clientY - $("#picture").offset().top;
+                // 鼠标移动是在整个屏幕上移动，所以 movemove 事件必须绑定到 $(document) 上
+                $(document).on('mousemove',move);
+                $(document).on('mouseup',stop);
+            }
+            return false; // 阻止默认事件或冒泡
+        }
+        /* 移动 */
+        function move(event){
+            // 通过鼠标移动后的位置和之前保存的相对距离计算图片的位置
+            $("#picture").css({
+                "left":(event.clientX - getX) + "px",
+                "top":(event.clientY - getY) + "px"
+            });
+            return false; // 阻止默认事件或冒泡
+        }
+        /* 结束 */
+        function stop(){
+            // 这里一定要解除事件绑定
+            $(document).unbind('mousemove',move);
+            $(document).unbind('mouseup',stop);
+        }
+    }
+    var obj = $("#picture"); // 目标
+    drag(obj); // 使用函数
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css 实现磨砂效果</title>
+    <script type="text/javascript" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .main {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            max-width: 200px;
+            max-height: 300px;
+            color: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 1px rgba(25, 25, 25, 0.5);
+            background: rgba(255, 255, 255, 0.06);
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .main > h1 {
+            position: absolute;
+            top: 50%;  left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            font-size: 3rem;
+            margin-top: 0;
+            transition: all .2s ease-in-out;
+        }
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;  right: 0;  bottom: 0;  left: 0;
+            z-index: -1;
+            filter: blur(6px);
+            transition: all .2s ease-in-out, filter .8s .22s ease-in-out;
+        }
+        .main:hover::before {
+            filter: blur(0);
+        }
+        .main1::before{ background: url('../Resource/image/warship/warship_200X320/maogai.png') 0/cover }
+        .main2::before{ background: url('../Resource/image/warship/warship_200X320/vvgai.png') 0/cover }
+        .main3::before{ background: url('../Resource/image/warship/warship_200X320/lexgai.png') 0/cover }
+    </style>
+</head>
+<body>
+<div>
+    <div class="main main1" style="float: left"><h1>maogai</h1></div>
+    <div class="main main2" style="float: left"><h1>vvgai</h1></div>
+    <div class="main main3" style="float: left"><h1>lexgai</h1></div>
+</div>
+</body>
+</html>

@@ -1,14 +1,16 @@
 // base image: http://hd4desktop.com/images/m/a-colours-circle-rainbow-HD-Wallpaper.jpg
-var data =  document.getElementById("data-lineCount").innerText;//获取设置的 3D 圆环效果参数
-var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
-    ctx = c.getContext( '2d' ),
-    
-    opts = {
-      
+var data = document.getElementById("data-lineCount").innerText; // 获取设置的 3D 圆环效果参数
+// window.innerWidth,window.innerHeight 只读属性，窗口的的高度和宽度，以像素计。
+// 这里的宽度和高度不包括菜单栏、工具栏以及滚动条等的高度
+var w = c.width = window.innerWidth;
+var h = c.height = window.innerHeight;
+// getContext() 方法返回一个用于在画布上绘图的环境
+// 当前唯一的合法参数是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API
+var ctx = c.getContext( '2d' );
+var opts = {
       lineCount: data,
       starCount: 30,
-      
+
       radVel: .01,
       lineBaseVel: .1,
       lineAddedVel: .1,
@@ -27,13 +29,13 @@ var w = c.width = window.innerWidth,
       ellipseCY: h / 2,
       
       repaintAlpha: .015
-    },
-    gui = new dat.GUI,
-    
-    lines = [],
-    stars = [],
-    tick = 0,
-    first = true;
+    };
+// dat.gui 是一个 GUI 组件，他可以为你的 demo 提供参数的设置
+var gui = new dat.GUI;
+var lines = [];
+var stars = [];
+var tick = 0;
+var first = true;
 
 function init() {
   
@@ -55,7 +57,7 @@ function init() {
     f.add( opts, 'lineAddedLife', 0, 1 );
     f.add( opts, 'starBaseLife', 0, 100 );
     f.add( opts, 'starAddedLife', 0, 100 );
-       f = gui.addFolder( 'graphics' );
+    f = gui.addFolder( 'graphics' );
     f.add( opts, 'ellipseTilt', -Math.PI, Math.PI ).step( .1 );
     f.add( opts, 'ellipseBaseRadius', 0, .5 );
     f.add( opts, 'ellipseAddedRadius', 0, .5 );
