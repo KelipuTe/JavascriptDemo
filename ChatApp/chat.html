@@ -15,15 +15,15 @@
     <button>Send</button>
 </form>
 <script>
-    var socket = io();/*实现了数据接收*/
+    var socket = io(); // 实现了数据接收
     $('form').submit(function () {
-        /*emit方法将数据传给服务器*/
-        /*参数值chat.message可以理解为频道*/
+        // emit方法将数据传给服务器
+        // 参数值chat.message可以理解为频道
         socket.emit('chat.message',$('#message').val());
         $('#message').val('');
         return false;
     });
-    /*处理服务器传过来的值*/
+    // 处理服务器传过来的值
     socket.on('chat.message',function (message) {
         $('#messages').append($('<li>').text(message));
     });

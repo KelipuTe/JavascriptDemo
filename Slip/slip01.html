@@ -43,25 +43,25 @@
     var maxCount = $(".mbox").length; // 计算载体中元素个数
     var nowNum = 0; // 当前页的索引
 
-    $(".main").width(mainWidth*maxCount); // 计算载体宽度
+    $(".main").width(mainWidth * maxCount); // 计算载体宽度
     $(".main").css({background:"#f60"});
 
     $("#lan1").click(function(){
-        if(nowNum > 0){ // 如果不是第一页
+        if(nowNum > 0){
+            // 如果不是第一页
             nowNum--; // 索引前移
-            /* 将载体向右移动一个单位宽度 */
-            $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){});
+            $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){}); // 将载体向右移动一个单位宽度
         }
     });
 
     $("#lan2").click(function(){
-        if(nowNum == maxCount-1){ // 如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可return;不做任何操作
+        if(nowNum == maxCount-1){
+            // 如果当前点击的已是最后一页则添加新页，其内容可通过AJAX获取，也可 return; 不做任何操作
             $(".main").append("<div class='mbox'>我是内容是"+(maxCount+1)+"</div>"); // 添加一个元素结点
             maxCount = $(".mbox").length; // 重新计算载体中元素个数
             $(".main").width(mainWidth*maxCount); // 重新计算载体宽度
         }
         nowNum++; // 索引后移
-        /* 将载体向左移动一个单位宽度 */
-        $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){})
+        $(".main").animate({left:-mainWidth*nowNum,opacity:1},800,function(){}) // 将载体向左移动一个单位宽度
     });
 </script>

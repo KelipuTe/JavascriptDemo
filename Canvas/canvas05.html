@@ -52,7 +52,7 @@
             boxWidth = boxWidth + 20;
             $('#main-box').css('width',boxWidth);
             $('#main-box').html( (boxWidth - 50) / 2 + '%');
-            timer = requestAnimationFrame(move);
+            timer = requestAnimationFrame(run);
         } else {
             cancelAnimationFrame(timer); // 关闭定时器
         }

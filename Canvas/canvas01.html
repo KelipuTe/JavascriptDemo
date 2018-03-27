@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>画布</title>
+    <!--<script type="text/javascript" rel="script" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
+    <script type="text/javascript" rel="script" src="../ThirdPartyLibrary/jquery-3.2.1.js"></script>
     <style>
         .main-container{
             width: 400px;
@@ -21,13 +23,22 @@
     <canvas id="main-canvas" class="main-canvas" width="400" height="400"></canvas>
 </div>
 <script>
+    // JavaScript 获取上下文对象
     var cv = document.getElementById("main-canvas");
     var ctx = cv.getContext("2d"); // getContext() 方法返回一个用于在画布上绘图的环境
 
+    // jQuery 获取上下文对象
+    // $(document).ready(function () {
+    //     var ctx = $('#main-canvas')[0].getContext("2d");
+    //     ctx.moveTo(0,0);
+    //     ctx.lineTo(400,400);
+    //     ctx.stroke(); // 没有 stroke() 方法 moveTo() lineTo() 不会绘图
+    // })
+
     // 绘制直线
-    // ctx.moveTo(0,0);
-    // ctx.lineTo(400,400);
-    // ctx.stroke(); // 没有 stroke() 方法 moveTo() lineTo() 不会绘图
+    ctx.moveTo(0,0);
+    ctx.lineTo(400,400);
+    ctx.stroke(); // 没有 stroke() 方法 moveTo() lineTo() 不会绘图
 
     // 绘制矩形
     // ctx.strokeStyle = 'red'; // 设置颜色
@@ -150,24 +161,24 @@
     // ctx.stroke();
 
     // 绘制虚线
-    ctx.beginPath();
-    ctx.strokeStyle = 'red';
-    ctx.setLineDash([10,5]); // 10px 实线，5px空白
-    ctx.moveTo(0,100);
-    ctx.lineTo(400,100);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.strokeStyle = 'yellow';
-    ctx.setLineDash([20,5,10,5]);
-    ctx.moveTo(0,200);
-    ctx.lineTo(400,200);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.strokeStyle = 'blue';
-    ctx.setLineDash([30,5,20,5,10,5]);
-    ctx.moveTo(0,300);
-    ctx.lineTo(400,300);
-    ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = 'red';
+    // ctx.setLineDash([10,5]); // 10px 实线，5px空白
+    // ctx.moveTo(0,100);
+    // ctx.lineTo(400,100);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = 'yellow';
+    // ctx.setLineDash([20,5,10,5]);
+    // ctx.moveTo(0,200);
+    // ctx.lineTo(400,200);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = 'blue';
+    // ctx.setLineDash([30,5,20,5,10,5]);
+    // ctx.moveTo(0,300);
+    // ctx.lineTo(400,300);
+    // ctx.stroke();
 </script>
 </body>
 </html>

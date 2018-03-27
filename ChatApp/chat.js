@@ -1,18 +1,16 @@
 var app = require('express')();
 
-var http = require('http').Server(app);// 处理 http 请求
+var http = require('http').Server(app); // 处理 http 请求
 var io = require('socket.io')(http);
 
 /* 类似于 Laravel 的路由 */
 app.get('/',function (request,response) {
     response.send('hello world'); // 向客户端发送信息
-    //response.sendFile(__dirname+'/SlippingBox.html'); // 向客户端发送文件
+    // response.sendFile(__dirname+'../Slip/slip05.html'); // 向客户端发送文件
 });
 
 io.on('connection',function (socket) {
-    // console.log('a user connect');
     socket.on('chat.message',function (message) {
-        // console.log('a new message:' + message)
         // 服务器拿到message后通过emit方法广播给连接服务器的所有的用户
         io.emit('chat.message',message);
     });
