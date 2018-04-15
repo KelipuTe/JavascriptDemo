@@ -13,13 +13,16 @@
         div{
             box-sizing: border-box;
         }
+        .model-body{
+            background: #111111;
+        }
         .model-stage{
             width: 1200px;
             height: 800px;
             min-width: 1200px;
             min-height: 800px;
             position: relative;
-            margin: 0 auto;
+            margin: 15px auto 0;
             background-color: #f0f0f0;
         }
         .model-main{
@@ -32,6 +35,7 @@
             width: 400px;
             min-width: 400px;
             background-color: #afffac;
+            overflow: hidden;
         }
         .model-main-center{
             width: 500px;
@@ -43,82 +47,83 @@
             min-width: 300px;
             background-color: #f2b5ab;
         }
-        .model-main-left-top{
-            width: 100px;
-            height: 200px;
-            background: #5588aa;
-            background: linear-gradient(-45deg, transparent 20%, #5588aa 20% ,#5588aa 100%);
-        }
-        .model-main-left-bottom{
-            width: 100px;
+        /* 左侧 */
+        .model-left-top{
+            width: 80px;
             height: 200px;
             position: absolute;
-            top: 600px;
-            background: #5588aa;
-            background: linear-gradient(45deg, #5588aa 80%,transparent 80% ,transparent 100%);
+            left: -80px; /*-80->0*/
+            background: linear-gradient(-45deg, transparent 15%, #5588aa 15% ,#5588aa 100%);
+            transition: all 1s 0s ease-out;
         }
-        .model-main-left-center{
+        .model-left-top-right{
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: 125px;
+            top: -150px; /*-150->25*/
+            background: blue;
+            transition: all 1s 0s ease-out;
+        }
+        .model-left-center{
             width: 350px;
             height: 300px;
             position: absolute;
-            left: 25px;
+            left: -350px; /*-350->25*/
             top: 250px;
-            position: absolute;
             background-color: #2aabd2;
+            transition: all 1s 0s ease-out;
         }
-        .model-main-left-background1{
+        .model-left-center-top{
             z-index: 1;
             width: 300px;
-            height: 500px;
+            height: 50px;
             position: absolute;
             left: 75px;
-            top: 150px;
-            background: #58a;
-            background: linear-gradient(135deg, transparent 15px, #58a 0) top left,
-            linear-gradient(45deg, transparent 15px, #655 0) bottom left;
-            background-size: 100% 10%;
-            background-repeat: no-repeat;
+            top: 340px; /*340->200*/
+            background-size: 100% 100%;
+            background: linear-gradient(135deg, transparent 15px, #58a 0) no-repeat top left;
+            transition: all 1s 0s ease-out;
+            opacity: 0;
         }
-        .model-main-left-background2{
-            z-index: 2;
+        .model-left-center-bottom{
+            z-index: 1;
             width: 300px;
-            height: 500px;
+            height: 50px;
             position: absolute;
             left: 75px;
-            top: 150px;
-            background: #58a;
-            background: linear-gradient(135deg, transparent 16px, #43aa3b 0) top left,
-            linear-gradient(45deg, transparent 16px, #94aa8a 0) bottom left;
-            background-size: 100% 10%;
-            background-repeat: no-repeat;
+            top: 390px; /*390->550*/
+            background-size: 100% 100%;
+            background: linear-gradient(45deg, transparent 15px, #94aa8a 0) no-repeat bottom left;
+            transition: all 1s 0s ease-out;
+            opacity: 0;
         }
-        .model-main-center-background1{
+        .model-left-bottom{
+            width: 80px;
+            height: 200px;
+            position: absolute;
+            left: -80px; /*-80->0*/
+            top: 600px;
+            background: linear-gradient(45deg, #5588aa 85%,transparent 85% ,transparent 100%);
+            transition: all 1s 0s ease-out;
+        }
+        .model-left-bottom-right{
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: 125px;
+            bottom: -150px; /*-150->25*/
+            background: blue;
+            transition: all 1s 0s ease-out;
+        }
+        /* 中间 */
+        .model-center-top{
             width: 500px;
             height: 150px;
             position: absolute;
-            background: #58a;
-            background:
-                    linear-gradient(135deg, #58a 50px , transparent 0) top left,
-                    linear-gradient(-135deg, #655 50px, transparent 0) top right;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-
+            background: #5566aa;
         }
-        .model-main-center-background2{
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            top: 150px;
-            background: #58a;
-            background:
-                    linear-gradient(135deg, transparent 50px, #58a 0) top left,
-                    linear-gradient(-135deg, transparent 50px, #655 0) top right,
-                    linear-gradient(-45deg, transparent 50px, #58a 0) bottom right,
-                    linear-gradient(45deg, transparent 50px, #655 0) bottom left;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-        }
-        .model-main-center-north-box{
+        .model-center-top-box{
             height: 50px;
             width: 450px;
             position: relative;
@@ -126,60 +131,472 @@
             margin-left: 25px;
             background-color: #3f51b5;
         }
-        .model-main-center-north-box-item1{
-            height: 50px;
-            width: 100px;
-        }
-        .model-main-center-north-box-item2{
+        .model-center-top-left-rectangle{
             height: 50px;
             width: 50px;
+            position: absolute;
+            left: 175px; /*175->0*/
+            background: #31878a;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-top-left-rectangle2{
+            height: 50px;
+            width: 80px;
+            position: absolute;
+            left: 145px; /*175->60*/
+            background: #398a2c;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-top-right-rectangle{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            left: 225px; /*225->350*/
+            background: #8a7435;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-top-right-rectangle2{
+            height: 50px;
+            width: 80px;
+            position: absolute;
+            left: 225px; /*225->310*/
+            background: #8a2a2c;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-top-left-circle{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            left: 175px;
             border-radius: 50%;
             background-color: #6b6b6b;
+            text-align: center;
+            font-size: 36px;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-top-right-circle{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            left: 225px;
+            border-radius: 50%;
+            background-color: #6b6b6b;
+            text-align: center;
+            font-size: 36px;
+            transition: all 0.5s 0s ease-out;
+            opacity: 0;
+        }
+        .model-center-center{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 150px;
+            /*background: #58a;*/
+            perspective: 800px;
+        }
+
+        .model-center-center-over{
+            z-index: 3;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 150px;
+            background: #58a;
+            opacity: 1;
+            transition: all 1s 0s ease-out;
         }
         .model-main-center-circle{
             width: 400px;
             height: 400px;
             position: relative;
-            margin-left: 50px;
-            margin-top: 50px;
-            border-radius: 50%;
+            margin: 50px 50px;
+            border-radius: 100%;
             background-color: #6b6b6b;
+            transition: all 3s 0s ease-out;
+            transform: translateZ(-10000px);
+            opacity: 0;
+        }
+        .model-container{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            transform-style: preserve-3d;
+            transition: all 3s 0s ease-out;
+            /*transform: translateZ(-10000px);*/
+            overflow:visible;
+        }
+        .model-side{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            overflow:visible;
+        }
+        .model-front{
+            z-index:2;
+            transform:translateZ(150px);
+            overflow:visible;
+        }
+        .model-back{
+            z-index:1;
+            transform:translateZ(-150px) rotateY(180deg);
+            overflow:visible;
+        }
+        .model-left{
+            left: -300px;
+            transform-origin: right;
+            transform:translateZ(150px) rotateY(-90deg);
+            overflow:visible;
+        }
+        .model-right{
+            left: 300px;
+            transform-origin: left;
+            transform:translateZ(150px) rotateY(90deg);
+            overflow:visible;
+        }
+        .model-top{
+            top: -300px;
+            transform-origin: bottom;
+            transform:translateZ(150px) rotateX(90deg);
+            overflow:visible;
+        }
+        .model-bottom{
+            top: 300px;
+            transform-origin: top;
+            transform:translateZ(150px) rotateX(-90deg);
+            overflow:visible;
+        }
+        .model-container-show-front{ transform: rotateY(0deg); }
+        .model-container-show-back{ transform: rotateY(180deg); }
+        .model-container-show-left{ transform: rotateY(90deg); }
+        .model-container-show-right{ transform: rotateY(-90deg); }
+        .model-container-show-top{ transform: rotateX(-90deg); }
+        .model-container-show-bottom{ transform: rotateX(90deg); }
+
+        .model-center-bottom{
+            width: 500px;
+            height: 150px;
+            position: absolute;
+            top: 650px;
+            background-color: #6b6b6b;
+        }
+        /*右侧*/
+        .model-right-top{
+            width: 300px;
+            height: 150px;
+            background-color: #2d9329;
+        }
+        .model-right-center{
+            width: 300px;
+            height: 300px;
+            background-color: #2c2f82;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            overflow: hidden;
+        }
+        .model-right-center-circle{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            border-radius: 100%;
+            background-color: #6b6b6b;
+            transition: all 3s 0s ease-out;
+            transform: translateZ(-10000px);
+            opacity: 0;
+        }
+        .model-right-bottom{
+            width: 300px;
+            height: 350px;
+            background-color: #a64b48;
+            overflow: hidden;
+        }
+        .model-right-bottom-north{
+            width: 300px;
+            height: 75px;
+            position: relative;
+            top: -100px;
+            background-color: #a61a14;
+            margin: 10px 0;
+            transition: all 1s 0s ease-out;
+        }
+        .model-right-bottom-north-btn{
+            width: 80px;
+            height: 75px;
+            margin: 0 5px;
+        }
+        .model-right-bottom-center{
+            width: 300px;
+            height: 150px;
+            position: relative;
+            left: 300px;
+            background-color: #a61a14;
+            margin: 15px 0;
+            transition: all 1s 0s ease-out;
+        }
+        .model-right-bottom-center-btn{
+            width: 150px;
+            height: 150px;
+        }
+        .model-right-bottom-south{
+            width: 300px;
+            height: 75px;
+            position: relative;
+            bottom: -100px;
+            background-color: #a61a14;
+            margin: 10px 0;
+            transition: all 1s 0s ease-out;
+        }
+        .model-right-bottom-south-btn{
+            width: 80px;
+            height: 75px;
+            margin: 0 5px;
+        }
+
+        .radar-base{
+            width:300px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            font-size: 64px;
+            text-align: center;
+            opacity: 0;
+        }
+        .radar {
+            background:
+                    -webkit-radial-gradient(center, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%),
+                    -webkit-repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%),
+                    -webkit-linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%),
+                    -webkit-linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
+            background:
+                    radial-gradient(center, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%),
+                    repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%),
+                    linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%),
+                    linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
+            width:400px;
+            height: 400px;
+            max-height: 75vh;
+            max-width: 75vh;
+            position: relative;
+            margin: 50px 50px;
+            border-radius: 50%;
+            border: 0.2rem solid #20ff4d;
+            overflow: hidden;
+        }
+        .radar:after {
+            content: ' ';
+            display: block;
+            background-image: linear-gradient(44deg, rgba(0, 255, 51, 0) 50%, #00ff33 100%);
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: radar-beam 2s infinite;
+            animation-timing-function: linear;
+            transform-origin: bottom right;
+            border-radius: 100% 0 0 0;
+        }
+        @keyframes radar-beam {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes radar-text {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
-<body>
+<body class="model-body">
 <div class="model-stage">
     <div class="model-main model-main-left">
-        <div class="model-main-left-background1"></div>
-        <div class="model-main-left-background2"></div>
-        <div class="model-main-left-top"></div>
-        <div class="model-main-left-center"></div>
-        <div class="model-main-left-bottom"></div>
+        <div class="model-left-top"></div>
+        <div class="model-left-top-right"></div>
+        <div class="model-left-center-top"></div>
+        <div class="model-left-center"></div>
+        <div class="model-left-center-bottom"></div>
+        <div class="model-left-bottom"></div>
+        <div class="model-left-bottom-right"></div>
     </div>
     <div class="model-main model-main-center">
-        <div class="model-main-center-background1">
-            <div class="model-main-center-north-box">
-                <button class="btn btn-primary model-main-center-north-box-item1 pull-left">111</button>
-                <div class="model-main-center-north-box-item2 pull-left"></div>
-
-                <button class="btn btn-primary model-main-center-north-box-item1 pull-right">111</button>
-                <div class="model-main-center-north-box-item2 pull-right"></div>
+        <div class="model-center-top">
+            <div class="model-center-top-box">
+                <div class="model-center-top-left-rectangle">111</div>
+                <div class="model-center-top-left-rectangle2">1111</div>
+                <div class="model-center-top-left-circle">1</div>
+                <div class="model-center-top-right-rectangle">222</div>
+                <div class="model-center-top-right-rectangle2">2222</div>
+                <div class="model-center-top-right-circle">2</div>
             </div>
-            <div class="model-main-center-north-box">
-                <button class="btn btn-primary model-main-center-north-box-item1 pull-left">111</button>
-                <div class="model-main-center-north-box-item2 pull-left"></div>
-
-                <button class="btn btn-primary model-main-center-north-box-item1 pull-right">111</button>
-                <div class="model-main-center-north-box-item2 pull-right"></div>
+            <div class="model-center-top-box">
+                <div class="model-center-top-left-rectangle">333</div>
+                <div class="model-center-top-left-rectangle2">3333</div>
+                <div class="model-center-top-left-circle">3</div>
+                <div class="model-center-top-right-rectangle">444</div>
+                <div class="model-center-top-right-rectangle2">4444</div>
+                <div class="model-center-top-right-circle">4</div>
             </div>
         </div>
-        <div class="model-main-center-background2">
-            <div class="model-main-center-circle"></div>
+        <div class="model-center-center">
+            <!--<div class="model-main-center-circle"></div>-->
+            <div class="model-container" id="model-container">
+                <img class="model-side model-front" src="../Resource/image/warship/warship_200X320/lexgai.png">
+                <img class="model-side model-back" src="../Resource/image/warship/warship_200X320/vvgai.png">
+                <img class="model-side model-left" src="../Resource/image/warship/warship_200X320/maogai.png">
+                <img class="model-side model-right" src="../Resource/image/warship/warship_200X320/haimagai.png">
+                <img class="model-side model-top" src="../Resource/image/warship/warship_200X320/zhaigai.png">
+                <img class="model-side model-bottom" src="../Resource/image/warship/warship_200X320/ougengai.png">
+            </div>
         </div>
+        <div class="model-center-center-over">
+            <div class="radar"></div>
+            <div class="radar-base">目标寻获</div>
+        </div>
+        <div class="model-center-bottom"></div>
     </div>
     <div class="model-main model-main-right">
-
+        <div class="model-right-top"></div>
+        <div class="model-right-center">
+            <div class="model-right-center-circle"></div>
+        </div>
+        <div class="model-right-bottom">
+            <div class="model-right-bottom-north text-center">
+                <button class="btn btn-primary model-right-bottom-north-btn" id="btn-front">前视图</button>
+                <button class="btn btn-primary model-right-bottom-north-btn" id="btn-left">左视图</button>
+                <button class="btn btn-primary model-right-bottom-north-btn" id="btn-top">顶视图</button>
+            </div>
+            <div class="model-right-bottom-center text-center">
+                <button class="btn btn-primary model-right-bottom-center-btn">预览图</button>
+                <button class="hidden" id="btn-prev"></button>
+            </div>
+            <div class="model-right-bottom-south text-center">
+                <button class="btn btn-primary model-right-bottom-south-btn" id="btn-back">后视图</button>
+                <button class="btn btn-primary model-right-bottom-south-btn" id="btn-right">右视图</button>
+                <button class="btn btn-primary model-right-bottom-south-btn" id="btn-bottom">底视图</button>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+//        $('.model-stage').css('margin-top',(window.screen.availHeight-60)/2-400+'px');
+
+        $('.model-left-center-top').css('opacity',1);
+        $('.model-left-center-bottom').css('opacity',1);
+
+        setTimeout(function () {
+            $('.model-left-center-top').css('top','200px');
+            $('.model-left-center-bottom').css('top','550px');
+
+            $('.model-center-top-left-circle').css('opacity',1);
+            $('.model-center-top-right-circle').css('opacity',1);
+        },1000);
+
+        setTimeout(function () {
+            $('.model-left-top-right').css('top','25px');
+            $('.model-left-bottom-right').css('bottom','25px');
+
+            $('.model-center-top-left-circle').css('left','150px');
+            $('.model-center-top-right-circle').css('left','250px');
+
+        },1500);
+
+        setTimeout(function () {
+            $('.model-left-center').css('left','25px');
+
+            $('.model-left-top').css('left',0);
+            $('.model-left-bottom').css('left',0);
+
+            $('.model-center-top-left-rectangle2').css('opacity',1);
+            $('.model-center-top-right-rectangle2').css('opacity',1);
+
+//            $('.model-center-center-over').css('opacity',0);
+
+            $('.model-right-bottom-north').css('top',0);
+            $('.model-right-bottom-center').css('left',0);
+            $('.model-right-bottom-south').css('bottom',0);
+
+
+        },2000);
+
+        setTimeout(function () {
+            $('.model-center-top-left-rectangle2').css('left','60px');
+            $('.model-center-top-right-rectangle2').css('left','310px');
+        },2500);
+
+        setTimeout(function () {
+
+            $('.model-center-top-left-rectangle').css('opacity',1);
+            $('.model-center-top-right-rectangle').css('opacity',1);
+
+            $('.radar-base').css('animation','radar-text 1s infinite linear');
+        },3000);
+
+        setTimeout(function () {
+
+            $('.model-center-top-left-rectangle').css('left','0');
+            $('.model-center-top-right-rectangle').css('left','400px');
+
+
+        },3500);
+
+        setTimeout(function () {
+            $('.model-center-center-over').css('opacity',0);
+        },6000);
+
+//        $('.model-main-center-circle').css({'transform':'translateZ(0)','opacity':1});
+
+        $('.model-right-center-circle').css({'transform':'translateZ(0)','opacity':1});
+
+//        $('.model-container').css({'transform':'translateZ(0)','opacity':1});
+
+
+
+        $('#btn-front').on('click',function () {
+            $('.model-container').css('transform','rotateY(0deg)');
+        });
+        $('#btn-back').on('click',function () {
+            $('.model-container').css('transform','rotateY(180deg)');
+        });
+        $('#btn-left').on('click',function () {
+            $('.model-container').css('transform','rotateY(90deg)');
+        });
+        $('#btn-right').on('click',function () {
+            $('.model-container').css('transform','rotateY(-90deg)');
+        });
+        $('#btn-top').on('click',function () {
+            $('.model-container').css('transform','rotateX(-90deg)');
+        });
+        $('#btn-bottom').on('click',function () {
+            $('.model-container').css('transform','rotateX(90deg)');
+        });
+    });
+
+    function containerShow(direction) {
+        var prev = $('#btn-prev').text();
+        $('#model-container').removeClass(prev);
+        $('#model-container').addClass('model-container-show-'+direction);
+        $('#btn-prev').text('model-container-show-'+direction)
+    }
+</script>
 </body>
 </html>
