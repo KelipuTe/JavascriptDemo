@@ -5,35 +5,73 @@
     <title>Cropper.js</title>
     <link href="cropper.css" rel="stylesheet">
     <script src="cropper.js"></script>
-    <style>
-        img {
-            display: block;
-
-            /* This rule is very important, please don't ignore this */
-            max-width: 100%;
-        }
-    </style>
 </head>
 <body>
 <div>
-    <img id="image" src="../Resource/image/avatar/default_avatar.jpg">
+    <button type="button" id="btn-choose-image">点击选择图片</button>
+    <input id='input-image' type="file" accept="image/jpg,image/jpeg,image/png" hidden/>
+    <div style="max-width: 800px;height: 450px">
+        <img id="cropper-image" src="">
+    </div>
+
+    <p>CropperData: <span id="cropper-data"></span></p>
+    <p>CropperCropBoxData: <span id="cropper-box-data"></span></p>
+    <div id="result-image"></div>
+
+    <button type="button" id="btn-upload-image">点击上传图片</button>
+    <div id="upload-image"></div>
 </div>
 </body>
 <script>
-    const image = document.getElementById('image');
-    const cropper = new Cropper(image, {
-        aspectRatio: 16 / 9,
-        crop(event) {
-            console.log(event.detail.x);
-            console.log(event.detail.y);
-            console.log(event.detail.width);
-            console.log(event.detail.height);
-            console.log(event.detail.rotate);
-            console.log(event.detail.scaleX);
-            console.log(event.detail.scaleY);
+    let eBtnChooseImage = document.getElementById('btn-choose-image');
+    let eInputImage = document.getElementById('input-image');
+    let eCropperImage = document.getElementById('cropper-image');
+    let eCropperData = document.getElementById('cropper-data');
+    let eCropperBoxData = document.getElementById('cropper-box-data');
+    let eResultImage = document.getElementById('result-image');
+    let eBtnUploadImage = document.getElementById('btn-upload-image');
+    let eUploadImage = document.getElementById('upload-image');
+
+    eBtnChooseImage.onclick = chooseImage;
+    eInputImage.onchange = inputImageChanged;
+    eBtnUploadImage.onclick = uploadImage;
+
+    let croppedCanvas = document.createElement('canvas');
+    let cropper = new Cropper(eCropperImage, {
+        viewMode: 1,
+        aspectRatio: 1,
+        crop: function (event) {
+            let tempCropperData = cropper.getData();
+            let tempCropperBoxData = cropper.getCropBoxData();
+            eCropperData.textContent = JSON.stringify(tempCropperData);
+            eCropperBoxData.textContent = JSON.stringify(tempCropperBoxData);
+            cropImage();
         },
     });
 
-    cropper.replace
+    function chooseImage(event) {
+        eInputImage.click();
+    }
+
+    function inputImageChanged() {
+        let imageReader = new FileReader();
+        imageReader.onload = function (event) {
+            cropper.replace(event.target.result)
+        };
+        imageReader.readAsDataURL(eInputImage.files[0]);
+    }
+
+    function cropImage(event) {
+        croppedCanvas = cropper.getCroppedCanvas();
+        eResultImage.innerHTML = '';
+        eResultImage.appendChild(croppedCanvas);
+    }
+
+    function uploadImage(event){
+        let croppedImageBase64 = croppedCanvas.toDataURL('image/jpeg');
+        let image = new Image();
+        image.src = croppedImageBase64;
+        eUploadImage.appendChild(image);
+    }
 </script>
 </html>
