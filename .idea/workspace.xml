@@ -20,25 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33acd59f-5a4a-4a67-b60a-3e2ced1ee8ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AnNiuXiaoGuo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KTTuPianGuanLiQi.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KTTuPianGuanLiQi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuPianXiaoGuo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/default_avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/lex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/mao.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/mao_remake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/ougen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/quincy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/avatar/vv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/background/ssv_fortress.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/haimagai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/lexgai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/maogai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/ougengai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/salagai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/vvgai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/image/warship/warship_200X320/zhaigai.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +34,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="ProjectId" id="1iqn4hnMOpSKUWtfGZ1LqjxshuC" />
   <component name="ProjectViewState">
@@ -70,11 +59,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../KTTuPianGuanLiQi" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GongZuoQu\WebQianDuanYangLi" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +84,9 @@
       <option name="presentableId" value="Default" />
       <updated>1602643799358</updated>
       <workItem from="1602643800419" duration="2802000" />
-      <workItem from="1602714767424" duration="12613000" />
+      <workItem from="1602714767424" duration="39049000" />
+      <workItem from="1602855395771" duration="3440000" />
+      <workItem from="1602906112886" duration="10022000" />
     </task>
     <servers />
   </component>
@@ -105,9 +106,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602725934016">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602906119122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1080.1880/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602725934016" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602906119122" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1080.1880/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602844792725" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1602767531132">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602767531132" />
+    <state x="539" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602767393360">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602767393360" />
   </component>
 </project>

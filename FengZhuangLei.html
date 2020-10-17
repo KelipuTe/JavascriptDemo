@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装类</title>
+    <script>
+        /*第一种方式*/
+        const Ctest1Class = {
+            createNew: function () {
+                let newService = {};
+                newService.canshu1 = 'canshu1';
+                newService.canshu2 = 'canshu2';
+                newService.function1 = function () {
+                    console.log('function1');
+                };
+                return newService;
+            }
+        }
+
+        /*第二种方式*/
+        const Ctest2Class = function (canshu1) {
+            this.canshu1 = canshu1;
+            this.canshu2 = 2;
+            this.function1 = function () {
+                console.log('function1');
+                let tempEle = document.createElement('button');
+                tempEle.id = 'anniu2';
+                tempEle.type = 'button';
+                tempEle.innerHTML = '按钮2';
+                tempEle.onclick = this.function2;
+                ele = document.getElementById('anniuzaiti');
+                ele.appendChild(tempEle);
+            };
+            this.function2 = function () {
+                canshu1 = 222;
+                console.log('canshu1',canshu1);
+            }
+        }
+
+        /*第三种方式*/
+        const Ctest3Class = (function () {
+            let canshu1 = 'canshu1';
+            let canshu2 = 'canshu2';
+
+            //构造函数
+            function _constructor() {
+                let tempEle = document.createElement('button');
+                tempEle.id = 'anniu3';
+                tempEle.type = 'button';
+                tempEle.innerHTML = '按钮3';
+                tempEle.onclick = function () {
+                    onClick();
+                };
+                ele = document.getElementById('anniuzaiti');
+                ele.appendChild(tempEle);
+            }
+
+            function onClick() {
+                console.log('canshu1',canshu1,'canshu2',canshu2);
+            }
+
+            function setterCanShu(canshu) {
+                canshu1 = canshu;
+            }
+
+            _constructor.prototype = {
+                constructor: _constructor,
+                setterCanShu: setterCanShu
+            }
+            return _constructor;
+        })();
+
+        window.onload = function () {
+            let test1 = Ctest1Class.createNew();
+            test1.function1();
+            console.log('test1',test1.canshu1);
+            console.log('test1',test1.canshu2);
+
+            let test2 = new Ctest2Class(1);
+            test2.function1();
+            console.log('test2',test2.canshu1);
+            console.log('test2',test2.canshu2);
+
+            let test3 = new Ctest3Class();
+            test3.setterCanShu('333');
+        }
+    </script>
+</head>
+<body>
+<div id="anniuzaiti"></div>
+</body>
+</html>
