@@ -54,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="ToolWindowFavorites.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KTTuPianGuanLiQi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,6 +84,7 @@
       <workItem from="1602714767424" duration="39049000" />
       <workItem from="1602855395771" duration="3440000" />
       <workItem from="1602906112886" duration="10729000" />
+      <workItem from="1605582643195" duration="374000" />
     </task>
     <servers />
   </component>
